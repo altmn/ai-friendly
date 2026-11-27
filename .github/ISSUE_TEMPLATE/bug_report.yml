@@ -1,0 +1,41 @@
+name: Report a problem
+description: Report a setup, audit, CLI, or documentation problem with a small example
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share one problem and the smallest useful synthetic example. Do not include credentials, account data, private URLs, or private website captures. Unknown or source-only reports are welcome; say what you have not run.
+  - type: input
+    id: version
+    attributes:
+      label: Source revision or version
+      description: Give the source revision or package version, or say unknown.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: AI tool or CLI environment
+      description: Include the app/surface, OS, and Node version when relevant. Say unknown for details you cannot find.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Prompt or steps
+      description: Give the exact prompt/command and a small synthetic input, or identify a source-only finding.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+      description: Explain what you expected, what you observed, and which checks were not run.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Minimal evidence
+      description: Add a short redacted error, output, or source reference. No private captures or full account logs.
