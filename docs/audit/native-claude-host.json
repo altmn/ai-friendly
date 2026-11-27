@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "record_type": "host-capabilities",
+  "format": "project-specific capability record; not native host config",
+  "target": {
+    "product": "Claude Code",
+    "surface": "local CLI",
+    "distribution": "disposable project-scoped skill",
+    "version": "2.1.98",
+    "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "policy": {
+      "controlled_fixture_only": true,
+      "live_installation": false
+    },
+    "missing_details": [
+      "Native catalog exposed skill, but inference was blocked by invalid OAuth."
+    ]
+  },
+  "artifact": {
+    "artifact_id": "ai-friendly-runtime-cbd3800",
+    "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+    "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+    "activated_source": null,
+    "activated_sha256": null,
+    "missing_identity_reason": "No native loaded-artifact identity for this surface; browser used explicit source, Claude inference was blocked."
+  },
+  "documented_at": "2026-11-26T22:10:52.501179+00:00",
+  "tested_at": "2026-11-26T22:10:52.501179+00:00",
+  "capabilities": {
+    "native_skill_discovery": {
+      "availability": "supported",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [
+        "2.1.98"
+      ],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Claude initialization exposed the skill.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-discovery.json",
+            "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "Claude initialization exposed the skill."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    },
+    "native_invocation": {
+      "availability": "untested",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [
+        "2.1.98"
+      ],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "blocked",
+        "reason": "OAuth HTTP 401 blocked inference.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-discovery.json",
+            "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "OAuth HTTP 401 blocked inference."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    }
+  },
+  "claims": {
+    "format": {
+      "outcome": "passed",
+      "reason": "Actual native catalog parsed the skill.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-discovery.json",
+          "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Actual native catalog parsed the skill."
+        }
+      ]
+    },
+    "discovery": {
+      "outcome": "passed",
+      "reason": "Claude initialization exposed ai-friendly-audit in skills and slash commands.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-discovery.json",
+          "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Claude initialization exposed ai-friendly-audit in skills and slash commands."
+        }
+      ]
+    },
+    "functional": {
+      "outcome": "blocked",
+      "reason": "Claude execution blocked by OAuth HTTP 401; user requested no retry.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Claude execution blocked by OAuth HTTP 401; user requested no retry."
+        }
+      ]
+    },
+    "safety": {
+      "outcome": "not_run",
+      "reason": "No Claude inference occurred.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "No Claude inference occurred."
+        }
+      ]
+    },
+    "support": {
+      "outcome": "inconclusive",
+      "reason": "Scoped pilot evidence only; full cross-host acceptance and broad reliability remain incomplete.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Scoped pilot evidence only; full cross-host acceptance and broad reliability remain incomplete."
+        }
+      ]
+    }
+  },
+  "maintenance": {
+    "commitment": "none",
+    "version_range": null,
+    "owner": null,
+    "repair_guide": null
+  },
+  "documentation_sources": [
+    "docs/audit/native-acceptance.md"
+  ]
+}

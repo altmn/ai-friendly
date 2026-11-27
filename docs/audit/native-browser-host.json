@@ -1,0 +1,289 @@
+{
+  "schema_version": "2.0",
+  "record_type": "host-capabilities",
+  "format": "project-specific capability record; not native host config",
+  "target": {
+    "product": "Codex Desktop with Browse",
+    "surface": "Desktop API/browser",
+    "distribution": "explicit source read; existing Chrome",
+    "version": "not_exposed",
+    "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "policy": {
+      "controlled_fixture_only": true,
+      "live_installation": false
+    },
+    "missing_details": [
+      "Desktop build/model not exposed; source applied explicitly."
+    ]
+  },
+  "artifact": {
+    "artifact_id": "ai-friendly-runtime-cbd3800",
+    "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+    "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+    "activated_source": null,
+    "activated_sha256": null,
+    "missing_identity_reason": "No native loaded-artifact identity for this surface; browser used explicit source, Claude inference was blocked."
+  },
+  "documented_at": "2026-11-26T22:10:52.501179+00:00",
+  "tested_at": "2026-11-26T22:10:52.501179+00:00",
+  "capabilities": {
+    "browser_navigation": {
+      "availability": "supported",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Actual public/private/review navigation.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-browser-run/audit.json",
+            "sha256": "795aa492fc6c5ef5d8fb13ca64d05d6663d58ff7acb23d0040b75767f0f2b41f",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "Actual public/private/review navigation."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    },
+    "keyboard_input": {
+      "availability": "supported",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Modal activation, dismissal, focus return and review navigation.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-browser-run/audit.json",
+            "sha256": "795aa492fc6c5ef5d8fb13ca64d05d6663d58ff7acb23d0040b75767f0f2b41f",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "Modal activation, dismissal, focus return and review navigation."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    },
+    "pointer_input": {
+      "availability": "supported",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Session/review controls operated; hit-test refusal preserved.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-browser-run/audit.json",
+            "sha256": "795aa492fc6c5ef5d8fb13ca64d05d6663d58ff7acb23d0040b75767f0f2b41f",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "Session/review controls operated; hit-test refusal preserved."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    },
+    "aria_snapshot": {
+      "availability": "supported",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Actual named-control snapshot captured; not full browser AX.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-browser-run/audit.json",
+            "sha256": "795aa492fc6c5ef5d8fb13ca64d05d6663d58ff7acb23d0040b75767f0f2b41f",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "Actual named-control snapshot captured; not full browser AX."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    },
+    "authenticated_browser": {
+      "availability": "supported",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Cookie-bound synthetic session reload/review, expiration and public continuation.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-browser-run/audit.json",
+            "sha256": "795aa492fc6c5ef5d8fb13ca64d05d6663d58ff7acb23d0040b75767f0f2b41f",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "Cookie-bound synthetic session reload/review, expiration and public continuation."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    },
+    "native_skill_discovery": {
+      "availability": "untested",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "not_run",
+        "reason": "Desktop catalog installation not exercised.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-browser-run/audit.json",
+            "sha256": "795aa492fc6c5ef5d8fb13ca64d05d6663d58ff7acb23d0040b75767f0f2b41f",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "Desktop catalog installation not exercised."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    },
+    "actual_extractor": {
+      "availability": "untested",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "not_run",
+        "reason": "No external extraction engine exercised.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-browser-run/audit.json",
+            "sha256": "795aa492fc6c5ef5d8fb13ca64d05d6663d58ff7acb23d0040b75767f0f2b41f",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "No external extraction engine exercised."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    }
+  },
+  "claims": {
+    "format": {
+      "outcome": "passed",
+      "reason": "Exact portable source was read; no Desktop catalog installation claimed.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-discovery.json",
+          "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Exact portable source was read; no Desktop catalog installation claimed."
+        }
+      ]
+    },
+    "discovery": {
+      "outcome": "not_run",
+      "reason": "Desktop catalog discovery not exercised.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-discovery.json",
+          "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Desktop catalog discovery not exercised."
+        }
+      ]
+    },
+    "functional": {
+      "outcome": "passed",
+      "reason": "Actual limited browser pilot has two completed review journeys and an expiration safe stop.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-browser-run/audit.json",
+          "sha256": "795aa492fc6c5ef5d8fb13ca64d05d6663d58ff7acb23d0040b75767f0f2b41f",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Actual limited browser pilot has two completed review journeys and an expiration safe stop."
+        }
+      ]
+    },
+    "safety": {
+      "outcome": "passed",
+      "reason": "Sampled final outputs omit the seeded value; browser commit/delete counters remain zero.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-oracles.json",
+          "sha256": "778eb3dcf2ecca26bd2bd51840769ccc1a58a5a4e7a1c9411e2e935465ec2f78",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Sampled final outputs omit the seeded value; browser commit/delete counters remain zero."
+        }
+      ]
+    },
+    "support": {
+      "outcome": "inconclusive",
+      "reason": "Scoped pilot evidence only; full cross-host acceptance and broad reliability remain incomplete.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Scoped pilot evidence only; full cross-host acceptance and broad reliability remain incomplete."
+        }
+      ]
+    }
+  },
+  "maintenance": {
+    "commitment": "none",
+    "version_range": null,
+    "owner": null,
+    "repair_guide": null
+  },
+  "documentation_sources": [
+    "docs/audit/native-acceptance.md"
+  ]
+}

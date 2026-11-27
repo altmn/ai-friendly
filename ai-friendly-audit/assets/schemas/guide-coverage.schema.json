@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/guide-coverage.schema.json",
+  "title": "AI Friendly Audit \u2014 guide-coverage",
+  "type": "object",
+  "properties": {
+    "checklist_id": {
+      "type": "string",
+      "pattern": "^G-A(0[1-9]|1[0-9]|2[0-6])$"
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+    "guide_sections": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "applicability": {
+      "enum": [
+        "applicable",
+        "inapplicable",
+        "unknown"
+      ]
+    },
+    "disposition": {
+      "enum": [
+        "frontend_assessed",
+        "frontend_partially_assessed",
+        "owner_verification_required",
+        "mixed",
+        "inapplicable",
+        "untested",
+        "cantTell"
+      ]
+    },
+    "rule_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "check_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "owner_verification_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "checklist_id",
+    "subject",
+    "guide_sections",
+    "applicability",
+    "disposition",
+    "rule_ids",
+    "check_ids",
+    "owner_verification_ids",
+    "reason"
+  ],
+  "additionalProperties": false
+}

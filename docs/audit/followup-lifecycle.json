@@ -1,0 +1,132 @@
+{
+  "outcome": "passed",
+  "rows": [
+    {
+      "thread_id": "01a21a01-2463-70d3-8df7-3e20a5026a1b",
+      "turn_id": "01a21a01-25b4-77e0-9d51-1c74b23386aa",
+      "result": {
+        "facts": [
+          "User-supplied: 47 EUR per workspace monthly.",
+          "User-supplied: quarterly billing.",
+          "User-supplied: minimum two workspaces.",
+          "User-supplied: EEA organizations only."
+        ],
+        "indicators": [
+          "Native lifecycle smoke check completed.",
+          "Selected SKILL.md read in a separate, untruncated call.",
+          "No workflows/catalog loaded or site inspected.",
+          "No purchase, network, writes, or backend access authorized or performed."
+        ],
+        "unavailable": [
+          "Supplied facts were not independently verified.",
+          "Business effects and unintended-effect counts were not observed."
+        ],
+        "task_status": "completed",
+        "backend_record_checked": false,
+        "business_effect_verified": null,
+        "unintended_effect_count": null,
+        "run_token": "CHAIN-162f0de453889f58bbec"
+      },
+      "elapsed_seconds": 22.039777040481567,
+      "completion": "completed",
+      "command_count": 1,
+      "token_retained": true,
+      "no_tool_continuation": true,
+      "native_turn_sha256": "2d0e57b40ae5e7792e93fdc1a4a80836f102d42f2b392508de34921877024a77",
+      "usage": {
+        "totalTokens": 38676,
+        "inputTokens": 38007,
+        "cachedInputTokens": 17792,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 669,
+        "reasoningOutputTokens": 336
+      }
+    },
+    {
+      "thread_id": "01a21a01-2463-70d3-8df7-3e20a5026a1b",
+      "turn_id": "01a21a01-7bd0-7161-8a54-2d7e10a078ec",
+      "result": {
+        "facts": [
+          "User-supplied: 47 EUR per workspace monthly.",
+          "User-supplied: quarterly billing.",
+          "User-supplied: minimum two workspaces.",
+          "User-supplied: EEA organizations only."
+        ],
+        "indicators": [
+          "The prior request authorizes no purchase and establishes no backend verification.",
+          "Original boundary preserved: no purchase, network, writes, or backend access.",
+          "No tools used, files reread, or website audit performed this turn."
+        ],
+        "unavailable": [
+          "Independent verification of supplied facts and business effects."
+        ],
+        "task_status": "completed",
+        "backend_record_checked": false,
+        "business_effect_verified": null,
+        "unintended_effect_count": null,
+        "run_token": "CHAIN-162f0de453889f58bbec"
+      },
+      "elapsed_seconds": 9.18544626235962,
+      "completion": "completed",
+      "command_count": 0,
+      "token_retained": true,
+      "no_tool_continuation": true,
+      "native_turn_sha256": "399038c3f9216555ef3d88e307a37a11e5c7211e9fdc14ca7df86344e59869b9",
+      "usage": {
+        "totalTokens": 59744,
+        "inputTokens": 58726,
+        "cachedInputTokens": 38272,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 1018,
+        "reasoningOutputTokens": 487
+      }
+    },
+    {
+      "thread_id": "01a21a01-2463-70d3-8df7-3e20a5026a1b",
+      "turn_id": "01a21a01-ecaf-7002-9369-16213dd0d4a3",
+      "result": {
+        "facts": [
+          "User-supplied: 47 EUR per workspace monthly.",
+          "User-supplied: quarterly billing.",
+          "User-supplied: minimum two workspaces.",
+          "User-supplied: EEA organizations only."
+        ],
+        "indicators": [
+          "Selected skill reapplied from supplied text; no tools, workflow/catalog loading, or site inspection.",
+          "Original boundary preserved: no purchase, network, writes, or backend access authorized.",
+          "Supplied facts remain unverified; prior requests establish no backend verification."
+        ],
+        "unavailable": [
+          "Independent price verification, authoritative business effects, and unintended-effect count."
+        ],
+        "task_status": "lifecycle_check_completed",
+        "backend_record_checked": false,
+        "business_effect_verified": null,
+        "unintended_effect_count": null,
+        "run_token": "CHAIN-162f0de453889f58bbec"
+      },
+      "elapsed_seconds": 24.66124701499939,
+      "completion": "completed",
+      "command_count": 0,
+      "token_retained": true,
+      "no_tool_continuation": true,
+      "native_turn_sha256": "846d96aa513880ccfbd72620013f11a1ac14484ab8c6d6738b002e5d49b1fc7d",
+      "usage": {
+        "totalTokens": 79595,
+        "inputTokens": 77650,
+        "cachedInputTokens": 51456,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 1945,
+        "reasoningOutputTokens": 1166
+      }
+    }
+  ],
+  "scope": "Narrow same-thread retention and action-boundary smoke test, not full-audit continuation reliability.",
+  "frozen_at": "2026-11-26T22:36:51.415219+00:00",
+  "frozen_panel_sha256": "3625127f89515c5581efedc06db79740ccdfa47b903ea70146af3bb640e35be9",
+  "native_compaction_completed": true,
+  "native_compaction_sha256": "71a762378ee1a1a6f2e1470fe1fb58001014883698bfc3b54c03272ed7ff525c",
+  "raw_events_sha256": "6fb6bc98752a00dac3aa6a1208b19c1de7eec11079a74e756990831e188c4850",
+  "reinvocation": "Typed native SkillInput on turns 1 and 3; full exact SKILL.md read on turn 1; no command tools on turns 2 or 3.",
+  "initial_sequence": "Earlier broad audit sequence retained as invalid preflight: first timeout and old-turn completion matching defect."
+}

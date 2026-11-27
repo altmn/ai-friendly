@@ -1,0 +1,76 @@
+{
+  "source": "E03",
+  "test_context": "supplied_evidence",
+  "facts": [
+    {
+      "id": "F01",
+      "label": "Plan",
+      "value": "Research workspace — Professional plan",
+      "qualifiers": [
+        "Plan identity"
+      ]
+    },
+    {
+      "id": "F02",
+      "label": "Base amount and currency",
+      "value": "$29 USD",
+      "qualifiers": [
+        "Currency explicitly USD"
+      ]
+    },
+    {
+      "id": "F03",
+      "label": "Price basis and billing interval",
+      "value": "Per user per month, when billed monthly",
+      "qualifiers": [
+        "Per user",
+        "Per month",
+        "Monthly billing condition"
+      ]
+    },
+    {
+      "id": "F04",
+      "label": "Eligibility",
+      "value": "U.S. accounts",
+      "qualifiers": [
+        "Region is an account condition; execution geography is not user intent"
+      ]
+    },
+    {
+      "id": "F05",
+      "label": "Included allowance",
+      "value": "100,000 requests per month",
+      "qualifiers": [
+        "Monthly quota; per-user versus pooled allocation is not stated"
+      ]
+    },
+    {
+      "id": "F06",
+      "label": "Overage",
+      "value": "$2 USD per 10,000 extra requests",
+      "qualifiers": [
+        "USD",
+        "Extra requests",
+        "10,000-request price unit; rounding and block purchase rules are not stated"
+      ]
+    },
+    {
+      "id": "F07",
+      "label": "Taxes",
+      "value": "Additional",
+      "qualifiers": [
+        "Quoted base amount excludes additional taxes; tax rates are not stated"
+      ]
+    },
+    {
+      "id": "F08",
+      "label": "Effective date",
+      "value": "December 1, 2026",
+      "qualifiers": [
+        "Future relative to supplied capture on November 22 and review on November 23, 2026; not evidence of the price in force before that date"
+      ]
+    }
+  ],
+  "qualified_answer": "According to the supplied synthetic snapshot, the Professional plan terms effective December 1, 2026 are $29 USD per user per month when billed monthly for U.S. accounts, with 100,000 requests per month included. Extra requests cost $2 USD per 10,000, and taxes are additional. The snapshot does not establish the price in force before December 1, whether the allowance is per user or pooled, or overage rounding.",
+  "verification_scope": "This answer matches the supplied text. It does not verify authoritative business prices, live reachability, or any real extractor result."
+}

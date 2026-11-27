@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "repair-verification",
+  "date": "2026-11-26",
+  "branch": "codex/audit-fixes-mit",
+  "base_commit": "c2cc80e089d56f06d44b267bbd6c65c1c872b2a3",
+  "identity_note": "Uncommitted candidate; manifest and archives identify runtime bytes. Base commit is not the changed candidate.",
+  "node": "24.22.3",
+  "os": "macOS arm64",
+  "attempts": [
+    {
+      "id": 1,
+      "tests": 79,
+      "passed": 78,
+      "failed": 1,
+      "reason": "New tool positive fixture omitted tool_declaration; fixture mapping corrected."
+    },
+    {
+      "id": 2,
+      "tests": 79,
+      "passed": 79,
+      "failed": 0,
+      "skipped": 0,
+      "log": "test-run-2.txt"
+    },
+    {
+      "id": 3,
+      "tests": 79,
+      "passed": 79,
+      "failed": 0,
+      "skipped": 0,
+      "elapsed_ms": 5784.673125,
+      "log": "test-run-3.txt",
+      "reason": "Final run after reviewed conditional-owner exclusions."
+    }
+  ],
+  "regressions_added": 31,
+  "runtime_files": 43,
+  "runtime_manifest_sha256": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde",
+  "archives": [
+    {
+      "file": "dist/ai-friendly-audit-canonical-package-1.0.0.zip",
+      "sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+      "files": 43
+    },
+    {
+      "file": "dist/ai-friendly-audit-development-and-verification-1.0.0.zip",
+      "sha256": "9a3263533036995281689e663a46a139839537f053278da48e43c5a0e9216258",
+      "files": 30
+    }
+  ],
+  "checks": {
+    "offline_schemas": "passed in suite",
+    "rules_drift": "passed; 71 rules",
+    "manifest": "43 hashes match",
+    "archives": "CRC passed; licenses included; dependencies excluded",
+    "whitespace": "passed",
+    "ci_pins": "verified official immutable tag refs; remote execution not_run"
+  },
+  "findings": {
+    "AUD-001": "resolved_local_regression",
+    "AUD-002": "resolved_local_regression",
+    "AUD-003": "resolved_local_regression",
+    "AUD-004": "resolved_local_regression",
+    "AUD-005": "resolved_local_regression",
+    "AUD-006": "resolved_local_regression",
+    "AUD-007": "open_native_acceptance_not_run",
+    "AUD-008": "resolved_local_regression"
+  },
+  "native_host": "not_run",
+  "authenticated_browser": "not_run",
+  "remote_ci": "not_run",
+  "support_tier": "CLI/prototype with explicit limits",
+  "full_release": "blocked by AUD-007",
+  "not_performed": [
+    "commit",
+    "push",
+    "merge",
+    "live installation",
+    "publication",
+    "paid model trials"
+  ]
+}

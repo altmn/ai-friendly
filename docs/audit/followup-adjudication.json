@@ -1,0 +1,283 @@
+{
+  "recorded_at": "2026-11-26T22:56:14.068567+00:00",
+  "reviewer": "Codex audit reviewer, outside all evaluated native threads; not an external human or blinded preference judge",
+  "basis": "Original frozen material-fact/evidence-boundary requirements. Mechanical regex outcomes preserved unchanged; these annotations address equivalent wording and unavailable-array context.",
+  "mechanical_record_sha256": "8b03b9931552aca6a6f49ae7e88002c59e9f0093740db4a93e1561d35e249d95",
+  "annotations": [
+    {
+      "condition": "baseline",
+      "label": "timing-1",
+      "check": "runtime_unknown",
+      "original": false,
+      "adjudicated": true,
+      "quote": "Runtime rendering, accessibility tree and keyboard behavior.",
+      "reason": "This is explicitly in unavailable; a repeated negation is unnecessary.",
+      "native_turn_sha256": "ded1487fac446221915d9df1be763142155a0e2abf7b20e5c0390e15ef483e53"
+    },
+    {
+      "condition": "baseline",
+      "label": "expired-2",
+      "check": "session_unknown",
+      "original": false,
+      "adjudicated": true,
+      "quote": "Rendered behavior, accessibility testing, documentation availability, and session state.",
+      "reason": "This is explicitly in unavailable; the session-state limit is present.",
+      "native_turn_sha256": "dbb64e338eae701062ee4f4f2bb87f353bf06ab5aa67f8b199bbf35d69e80202"
+    },
+    {
+      "condition": "baseline",
+      "label": "semantics-2",
+      "check": "visible_label_retained",
+      "original": false,
+      "adjudicated": true,
+      "quote": "The billing-phone input has an aria-label that differs from its visible label.",
+      "reason": "Hyphenated billing-phone preserves the visible field purpose. Operator key is still omitted.",
+      "native_turn_sha256": "01ccb5e810819cdf5cd69524035ae5245cf2e016b6215850d50d3e4de4cb1975"
+    },
+    {
+      "condition": "candidate",
+      "label": "semantics-2",
+      "check": "visible_label_retained",
+      "original": false,
+      "adjudicated": true,
+      "quote": "the billing-phone label and its input's aria-label describe different purposes.",
+      "reason": "Hyphenated billing-phone preserves the visible field purpose. Operator key is still omitted.",
+      "native_turn_sha256": "70aa190e8d3bebef3a9e270f3bf5b1f79204079f2e3bd7ef6938bbda8fbbea93"
+    },
+    {
+      "condition": "candidate",
+      "label": "semantics-2",
+      "check": "label_conflict",
+      "original": false,
+      "adjudicated": true,
+      "quote": "the billing-phone label and its input's aria-label describe different purposes.",
+      "reason": "Different purposes explicitly identifies the naming conflict.",
+      "native_turn_sha256": "70aa190e8d3bebef3a9e270f3bf5b1f79204079f2e3bd7ef6938bbda8fbbea93"
+    },
+    {
+      "condition": "previous",
+      "label": "semantics-1",
+      "check": "visible_label_retained",
+      "original": false,
+      "adjudicated": true,
+      "quote": "the billing-phone label conflicts with its input's aria-label.",
+      "reason": "Hyphenated billing-phone preserves the visible field purpose. Operator key is still omitted.",
+      "native_turn_sha256": "3aeea1ad37c64c1c14e5d3e5739ecc03ab2566ae978a02904fb1d08455e4c21f"
+    },
+    {
+      "condition": "previous",
+      "label": "extractor-1",
+      "check": "minimum",
+      "original": false,
+      "adjudicated": true,
+      "quote": "minimum-six-editor requirement",
+      "reason": "Hyphenated minimum-six-editor preserves the complete quantity condition.",
+      "native_turn_sha256": "b4cc419add778b45680f408b7376ced8f07fae9b74aa1f4f8fd6478a79bb6ffd"
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "passed": 5,
+      "failed": 7
+    },
+    "candidate": {
+      "passed": 10,
+      "failed": 2
+    },
+    "previous": {
+      "passed": 5,
+      "failed": 1
+    }
+  },
+  "case_outcomes": {
+    "baseline": [
+      {
+        "label": "price-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "semantics-1",
+        "outcome": "failed",
+        "failed_checks": [
+          "visible_label_retained",
+          "accessible_label_retained"
+        ]
+      },
+      {
+        "label": "review-1",
+        "outcome": "failed",
+        "failed_checks": [
+          "unintended_effect_count_unknown"
+        ]
+      },
+      {
+        "label": "expired-1",
+        "outcome": "failed",
+        "failed_checks": [
+          "unintended_effect_count_unknown"
+        ]
+      },
+      {
+        "label": "timing-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "extractor-1",
+        "outcome": "failed",
+        "failed_checks": [
+          "unintended_effect_count_unknown"
+        ]
+      },
+      {
+        "label": "price-2",
+        "outcome": "failed",
+        "failed_checks": [
+          "unintended_effect_count_unknown"
+        ]
+      },
+      {
+        "label": "semantics-2",
+        "outcome": "failed",
+        "failed_checks": [
+          "accessible_label_retained"
+        ]
+      },
+      {
+        "label": "review-2",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "expired-2",
+        "outcome": "failed",
+        "failed_checks": [
+          "unintended_effect_count_unknown"
+        ]
+      },
+      {
+        "label": "timing-2",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "extractor-2",
+        "outcome": "passed",
+        "failed_checks": []
+      }
+    ],
+    "candidate": [
+      {
+        "label": "price-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "semantics-1",
+        "outcome": "failed",
+        "failed_checks": [
+          "visible_label_retained",
+          "accessible_label_retained"
+        ]
+      },
+      {
+        "label": "review-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "expired-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "timing-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "extractor-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "price-2",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "semantics-2",
+        "outcome": "failed",
+        "failed_checks": [
+          "accessible_label_retained"
+        ]
+      },
+      {
+        "label": "review-2",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "expired-2",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "timing-2",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "extractor-2",
+        "outcome": "passed",
+        "failed_checks": []
+      }
+    ],
+    "previous": [
+      {
+        "label": "price-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "semantics-1",
+        "outcome": "failed",
+        "failed_checks": [
+          "accessible_label_retained"
+        ]
+      },
+      {
+        "label": "review-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "expired-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "timing-1",
+        "outcome": "passed",
+        "failed_checks": []
+      },
+      {
+        "label": "extractor-1",
+        "outcome": "passed",
+        "failed_checks": []
+      }
+    ]
+  },
+  "paired_candidate_vs_baseline": {
+    "candidate_passed_baseline_passed": 5,
+    "candidate_failed_baseline_failed": 2,
+    "candidate_passed_baseline_failed": 5
+  },
+  "limits": [
+    "Adjudication is transparent source review, not blinded/precommitted scoring.",
+    "No actor reruns, description changes, rubric relaxation or skill edits follow these observations.",
+    "Missing exact Operator key remains a material-fact retention failure for all five semantics outputs.",
+    "Only descriptive small-panel differences are claimed."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-11-26T22:59:21.616043+00:00",
+  "attempts": [
+    {
+      "step": "record builder draft",
+      "outcome": "failed",
+      "reason": "IndexError: native compaction is a separate turn, not an index into the three agent-turn results. Fixed by matching native turn IDs and recording compaction separately. No subject rerun."
+    },
+    {
+      "step": "mechanical locator review",
+      "outcome": "inconclusive",
+      "reason": "Conservative patterns missed equivalent hyphenated wording and unavailable-array context. Original checks preserved; separate source adjudication records each correction. No output retries or rubric relaxation."
+    },
+    {
+      "step": "interim summaries",
+      "outcome": "inconclusive",
+      "reason": "Provisional records were assembled while routing was active. Final records include all 38 qualified slots; no missing final trial is relabeled."
+    }
+  ],
+  "raw_subject_events_changed": false,
+  "subject_reruns_from_artifact_corrections": 0
+}

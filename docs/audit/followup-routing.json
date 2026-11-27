@@ -1,0 +1,290 @@
+{
+  "trials": [
+    {
+      "label": "routing-positive-price-1",
+      "thread_id": "01a21a0e-7b2e-7a83-80c6-6869a94b5f0d",
+      "turn_id": "01a21a0e-7fa1-7061-b956-94d619df107b",
+      "elapsed_seconds": 33.93422269821167,
+      "turn_sha256": "39a26c3e14961ce5b3411d825603c2457c44d540e6ea9885c919a4aa69d7eec1",
+      "checks": {
+        "exact_completion_identity": true,
+        "stored_final_matches_native": true
+      },
+      "result": null,
+      "exact_entrypoint_read": true,
+      "command_count": 4,
+      "native_item_types": {
+        "userMessage": 1,
+        "agentMessage": 2,
+        "commandExecution": 4,
+        "reasoning": 2
+      },
+      "usage": {
+        "totalTokens": 125419,
+        "inputTokens": 124308,
+        "cachedInputTokens": 86272,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 1111,
+        "reasoningOutputTokens": 45
+      },
+      "cost_usd": null,
+      "final_sha256": "9903b4cfb5077bc53f2cd74668bf82f6692c9c51aaad10f0953f6fd0190fe79b",
+      "expected": true,
+      "activated": true
+    },
+    {
+      "label": "routing-positive-form-1",
+      "thread_id": "01a21a0f-046e-7c60-8cbe-a03f8d1aa025",
+      "turn_id": "01a21a0f-04cb-73c2-9487-eeee94de1a9c",
+      "elapsed_seconds": 46.02190375328064,
+      "turn_sha256": "8f2208c7098537e8115f0dafbd95d31261f0059544ebbf981a38146c2d62f7a0",
+      "checks": {
+        "exact_completion_identity": true,
+        "stored_final_matches_native": true
+      },
+      "result": null,
+      "exact_entrypoint_read": true,
+      "command_count": 12,
+      "native_item_types": {
+        "userMessage": 1,
+        "agentMessage": 2,
+        "commandExecution": 12,
+        "reasoning": 3
+      },
+      "usage": {
+        "totalTokens": 129746,
+        "inputTokens": 128234,
+        "cachedInputTokens": 97536,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 1512,
+        "reasoningOutputTokens": 87
+      },
+      "cost_usd": null,
+      "final_sha256": "6cd8dd342b12eb1527da9069f559cafea8988f9dfb975b3f305c516baf0394c9",
+      "expected": true,
+      "activated": true
+    },
+    {
+      "label": "routing-negative-coding-1",
+      "thread_id": "01a21a0f-b8e0-7710-855a-d56c4edc2eda",
+      "turn_id": "01a21a0f-b93e-76d3-87cf-a43c290e6db0",
+      "elapsed_seconds": 8.577147960662842,
+      "turn_sha256": "1089c5ac8bd57bfd6ad42b45d1ce4addd27b15f8d93d5f8b7be90118e5b0ddbb",
+      "checks": {
+        "exact_completion_identity": true,
+        "stored_final_matches_native": true
+      },
+      "result": null,
+      "exact_entrypoint_read": false,
+      "command_count": 0,
+      "native_item_types": {
+        "userMessage": 1,
+        "agentMessage": 1
+      },
+      "usage": {
+        "totalTokens": 15599,
+        "inputTokens": 15542,
+        "cachedInputTokens": 6784,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 57,
+        "reasoningOutputTokens": 0
+      },
+      "cost_usd": null,
+      "final_sha256": "40b16475881d4b5c6a28e337e449ebeef010eb2447b3f259332069f16ecb9e8a",
+      "expected": false,
+      "activated": false
+    },
+    {
+      "label": "routing-negative-concept-1",
+      "thread_id": "01a21a0f-daf2-7e51-82d2-9f929ca0bbb3",
+      "turn_id": "01a21a0f-db54-70d2-b668-a5ba77ea1838",
+      "elapsed_seconds": 8.51410984992981,
+      "turn_sha256": "1b1470bedc1418e8e0074ed8544d0bf69c0de3c83f9cd84ca681bdae46aabf06",
+      "checks": {
+        "exact_completion_identity": true,
+        "stored_final_matches_native": true
+      },
+      "result": null,
+      "exact_entrypoint_read": false,
+      "command_count": 0,
+      "native_item_types": {
+        "userMessage": 1,
+        "agentMessage": 1
+      },
+      "usage": {
+        "totalTokens": 15575,
+        "inputTokens": 15541,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 34,
+        "reasoningOutputTokens": 0
+      },
+      "cost_usd": null,
+      "final_sha256": "f5a0ac2e657af66f8f541ae376faf496a5e846216e40bf05b454c91dbe831214",
+      "expected": false,
+      "activated": false
+    },
+    {
+      "label": "routing-positive-price-2",
+      "thread_id": "01a21a0f-fcc5-7d01-a18f-54dd853c7665",
+      "turn_id": "01a21a0f-fd2b-7a81-a28d-a536410ff2c6",
+      "elapsed_seconds": 36.307069301605225,
+      "turn_sha256": "43e7d5b2d10cac8d114b02ffc7fc200fa93717301c7a51b6bdacdc1df78c356b",
+      "checks": {
+        "exact_completion_identity": true,
+        "stored_final_matches_native": true
+      },
+      "result": null,
+      "exact_entrypoint_read": true,
+      "command_count": 13,
+      "native_item_types": {
+        "userMessage": 1,
+        "agentMessage": 2,
+        "commandExecution": 13,
+        "reasoning": 2
+      },
+      "usage": {
+        "totalTokens": 120413,
+        "inputTokens": 119245,
+        "cachedInputTokens": 94976,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 1168,
+        "reasoningOutputTokens": 78
+      },
+      "cost_usd": null,
+      "final_sha256": "ce78fcd34b72d92de6e9b6ca3cbb1387be30f0115c09500ccb0fbade1857e9ce",
+      "expected": true,
+      "activated": true
+    },
+    {
+      "label": "routing-positive-form-2",
+      "thread_id": "01a21a10-8b67-7c70-80a6-d1c708b2faa9",
+      "turn_id": "01a21a10-8bf1-7170-bace-7c7f8ecf6a31",
+      "elapsed_seconds": 40.89274287223816,
+      "turn_sha256": "c3efc7ca9e965355c2a794cadb7abbe752f39eb4f997438044eeef23bae9a538",
+      "checks": {
+        "exact_completion_identity": true,
+        "stored_final_matches_native": true
+      },
+      "result": null,
+      "exact_entrypoint_read": true,
+      "command_count": 11,
+      "native_item_types": {
+        "userMessage": 1,
+        "agentMessage": 2,
+        "commandExecution": 11,
+        "reasoning": 2
+      },
+      "usage": {
+        "totalTokens": 123618,
+        "inputTokens": 122346,
+        "cachedInputTokens": 96640,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 1272,
+        "reasoningOutputTokens": 30
+      },
+      "cost_usd": null,
+      "final_sha256": "95de6efd4e06a755cb48a3cb51b9692a482b0410211a4929895616811e40b935",
+      "expected": true,
+      "activated": true
+    },
+    {
+      "label": "routing-negative-coding-2",
+      "thread_id": "01a21a11-2bf5-7fa1-858d-6b6e8794b71b",
+      "turn_id": "01a21a11-2c5f-7d43-9b27-b757da40e4d8",
+      "elapsed_seconds": 8.655876159667969,
+      "turn_sha256": "4ac4f32947f7466e15472998cce9d12734cc2eb987bdcbecf48744c9e5dea772",
+      "checks": {
+        "exact_completion_identity": true,
+        "stored_final_matches_native": true
+      },
+      "result": null,
+      "exact_entrypoint_read": false,
+      "command_count": 0,
+      "native_item_types": {
+        "userMessage": 1,
+        "agentMessage": 1
+      },
+      "usage": {
+        "totalTokens": 15600,
+        "inputTokens": 15542,
+        "cachedInputTokens": 6784,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 58,
+        "reasoningOutputTokens": 0
+      },
+      "cost_usd": null,
+      "final_sha256": "2ee75c4d12cec309aeb080352d282d29b43dbc67e64b30b0efd1c68863d2c3e2",
+      "expected": false,
+      "activated": false
+    },
+    {
+      "label": "routing-negative-concept-2",
+      "thread_id": "01a21a11-4e68-7d80-a33b-6d12be90dc47",
+      "turn_id": "01a21a11-5220-7e31-9e01-fc01efdff12b",
+      "elapsed_seconds": 7.722590208053589,
+      "turn_sha256": "771b0361fea0a26ec652187661e94568cd0f17fe0396c175d6fbbf2b078c4b70",
+      "checks": {
+        "exact_completion_identity": true,
+        "stored_final_matches_native": true
+      },
+      "result": null,
+      "exact_entrypoint_read": false,
+      "command_count": 0,
+      "native_item_types": {
+        "userMessage": 1,
+        "agentMessage": 1
+      },
+      "usage": {
+        "totalTokens": 15576,
+        "inputTokens": 15541,
+        "cachedInputTokens": 0,
+        "cacheWriteInputTokens": 0,
+        "outputTokens": 35,
+        "reasoningOutputTokens": 0
+      },
+      "cost_usd": null,
+      "final_sha256": "0811e793590c67c0813f867087423c554645c2908932c1537689383e009c18c0",
+      "expected": false,
+      "activated": false
+    }
+  ],
+  "counts": {
+    "TP": 4,
+    "FN": 0,
+    "FP": 0,
+    "TN": 4,
+    "unknown": 0
+  },
+  "precision": 1.0,
+  "recall": 1.0,
+  "false_activation_rate": 0.0,
+  "f1": 1.0,
+  "query_majority": [
+    {
+      "query": "positive-price",
+      "activation": true
+    },
+    {
+      "query": "positive-form",
+      "activation": true
+    },
+    {
+      "query": "negative-coding",
+      "activation": false
+    },
+    {
+      "query": "negative-concept",
+      "activation": false
+    }
+  ],
+  "query_majority_counts": {
+    "TP": 2,
+    "FN": 0,
+    "FP": 0,
+    "TN": 2,
+    "unknown": 0
+  },
+  "scheduled_trials": 8,
+  "scope": "Four frozen author-written prompts; two repeats; no description changes. Isolated catalog, not broad held-out reliability."
+}

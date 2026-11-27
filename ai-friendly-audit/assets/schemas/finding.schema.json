@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/finding.schema.json",
+  "title": "AI Friendly Audit \u2014 finding",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+    },
+    "rule_id": {
+      "type": "string",
+      "pattern": "^AFF-[A-Z]+-[0-9]{3}$"
+    },
+    "check_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "state_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "guide_sections": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "guide_checklist_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "basis": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/basis"
+    },
+    "evidence_scope": {
+      "enum": [
+        "frontend_verifiable",
+        "frontend_indicator"
+      ]
+    },
+    "test_context": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/context"
+    },
+    "profile": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/profile"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "modalities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "severity": {
+      "enum": [
+        "blocker",
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "status": {
+      "enum": [
+        "confirmed",
+        "investigation_lead"
+      ]
+    },
+    "observed": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expected": {
+      "type": "string",
+      "minLength": 1
+    },
+    "impact": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "reproduction": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "recommendation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verification": {
+      "type": "string",
+      "minLength": 1
+    },
+    "workstream": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_location": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "checked_on": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/date"
+    },
+    "review_trigger": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "id",
+    "rule_id",
+    "check_ids",
+    "state_ids",
+    "guide_sections",
+    "guide_checklist_ids",
+    "basis",
+    "evidence_scope",
+    "test_context",
+    "profile",
+    "title",
+    "modalities",
+    "severity",
+    "confidence",
+    "status",
+    "observed",
+    "expected",
+    "impact",
+    "evidence_ids",
+    "reproduction",
+    "uncertainty",
+    "recommendation",
+    "verification",
+    "workstream",
+    "source_location",
+    "checked_on",
+    "review_trigger"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "confidence": {
+            "const": "low"
+          }
+        },
+        "required": [
+          "confidence"
+        ]
+      },
+      "then": {
+        "properties": {
+          "status": {
+            "const": "investigation_lead"
+          }
+        }
+      }
+    }
+  ]
+}

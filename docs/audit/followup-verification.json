@@ -1,0 +1,40 @@
+{
+  "recorded_at": "2026-11-26T22:59:21.616043+00:00",
+  "branch": "codex/aud-007-nonclaude-completion",
+  "runtime_changed": false,
+  "resource_tests": {
+    "command": "node --test development/tests/*.mjs",
+    "node": "24.22.3",
+    "passed": 79,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 6.521100792,
+    "exit_code": 0
+  },
+  "harness_tests": {
+    "command": "python3 -m unittest discover -s development/native_acceptance -p 'test_*.py' -v",
+    "passed": 9,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "generation": {
+    "command": "npm run generate",
+    "exit_code": 0,
+    "runtime_drift": false,
+    "rules": 71
+  },
+  "catalog_check": {
+    "command": "npm run check",
+    "exit_code": 0
+  },
+  "ci": "Offline harness regressions added; native model/browser tests are not automatic CI.",
+  "record_validation": "followup-record-validation.json; original unmodified v2 schemas and local artifact hashes",
+  "whitespace_check": {
+    "command": "git diff --check",
+    "exit_code": 0
+  },
+  "limits": [
+    "All model/browser outcomes remain limited to the recorded candidates, fixtures and profiles.",
+    "The recorded acceptance runs made no Claude/cloud-browser calls, push, commit, merge or publication. Subsequent user authorization covers committing and merging these reports and tests."
+  ]
+}

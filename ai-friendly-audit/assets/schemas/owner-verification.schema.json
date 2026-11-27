@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/owner-verification.schema.json",
+  "title": "AI Friendly Audit \u2014 owner-verification",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+    },
+    "guide_sections": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "guide_checklist_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "applicability": {
+      "enum": [
+        "applicable",
+        "inapplicable",
+        "unknown"
+      ]
+    },
+    "related_check_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "observed_indicators": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "unknown_guarantee": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "owner_verification_required",
+        "owner_evidence_supplied",
+        "resolved_by_external_assessment"
+      ]
+    },
+    "workstream": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verification_priority": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "priority_rationale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "acceptance_procedure": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "review_trigger": {
+      "type": "string",
+      "minLength": 1
+    },
+    "external_assessment": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "assessor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "checked_on": {
+              "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/date"
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+              },
+              "uniqueItems": true,
+              "minItems": 1
+            },
+            "evidence_kind": {
+              "enum": [
+                "owner_assertion",
+                "inspectable_authoritative_evidence",
+                "external_assessment"
+              ]
+            }
+          },
+          "required": [
+            "assessor",
+            "checked_on",
+            "scope",
+            "evidence_ids",
+            "evidence_kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "conditional_exclusion": {
+      "type": "object",
+      "properties": {
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "adequacy_reviewed": {
+          "const": true
+        }
+      },
+      "required": [
+        "reason",
+        "evidence_ids",
+        "adequacy_reviewed"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "id",
+    "guide_sections",
+    "guide_checklist_ids",
+    "applicability",
+    "related_check_ids",
+    "observed_indicators",
+    "unknown_guarantee",
+    "status",
+    "workstream",
+    "verification_priority",
+    "priority_rationale",
+    "requested_evidence",
+    "acceptance_procedure",
+    "review_trigger",
+    "external_assessment"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ai-friendly-audit-frontend",
+  "version": "1.0.0",
+  "skill_name": "ai-friendly-audit",
+  "entry_reference": "references/ai-friendly-audit-frontend.md",
+  "rule_catalog": "assets/rules/frontend-v1.json",
+  "rule_catalog_version": "1.0.0",
+  "guide_revision": "2.0",
+  "profiles": [
+    {
+      "id": "public-retrieval",
+      "guide_goal": "retrieve",
+      "default": "when_applicable"
+    },
+    {
+      "id": "browser-operability",
+      "guide_goal": "operate",
+      "default": "when_applicable"
+    },
+    {
+      "id": "discovery-and-citation",
+      "guide_goal": "discover-and-cite",
+      "default": "when_applicable"
+    },
+    {
+      "id": "frontend-tools",
+      "guide_goal": "integrate",
+      "default": "when_offered_and_supported"
+    },
+    {
+      "id": "source-maintainability",
+      "guide_goal": "supporting",
+      "default": "when_source_available"
+    }
+  ],
+  "schemas": {
+    "capability": "assets/schemas/capability.schema.json",
+    "check": "assets/schemas/check.schema.json",
+    "common": "assets/schemas/common.schema.json",
+    "compatibility-test": "assets/schemas/compatibility-test.schema.json",
+    "compatibility-tests": "assets/schemas/compatibility-tests.schema.json",
+    "evidence-index": "assets/schemas/evidence-index.schema.json",
+    "evidence": "assets/schemas/evidence.schema.json",
+    "finding": "assets/schemas/finding.schema.json",
+    "guide-coverage": "assets/schemas/guide-coverage.schema.json",
+    "journey": "assets/schemas/journey.schema.json",
+    "owner-verification": "assets/schemas/owner-verification.schema.json",
+    "report": "assets/schemas/report.schema.json",
+    "rule-catalog": "assets/schemas/rule-catalog.schema.json"
+  },
+  "capability_requirements": {
+    "minimum_any_of": [
+      "http_retrieval",
+      "navigation",
+      "screenshots",
+      "supplied_evidence"
+    ],
+    "full_browser": [
+      "navigation",
+      "screenshots",
+      "rendered_dom",
+      "keyboard_input",
+      "network_metadata",
+      "storage_metadata"
+    ],
+    "capability_names": [
+      "tab_selection",
+      "existing_session_attachment",
+      "browser_observation",
+      "browser_takeover",
+      "credential_handoff",
+      "navigation",
+      "pointer_input",
+      "keyboard_input",
+      "viewport_control",
+      "screenshots",
+      "rendered_dom",
+      "computed_styles",
+      "computed_accessibility_tree",
+      "aria_snapshot",
+      "page_evaluation",
+      "frame_inspection",
+      "open_shadow_roots",
+      "closed_shadow_roots",
+      "console_errors",
+      "network_metadata",
+      "response_bodies",
+      "service_worker_attribution",
+      "request_timing",
+      "storage_metadata",
+      "cookie_attributes",
+      "indexeddb_metadata",
+      "cache_metadata",
+      "performance_traces",
+      "accessibility_scanner",
+      "lighthouse",
+      "agentic_browsing",
+      "webmcp_inspection",
+      "terminal",
+      "filesystem",
+      "http_retrieval",
+      "network_egress",
+      "original_source",
+      "initial_response",
+      "actual_extractor_output",
+      "alternate_representations",
+      "extraction_metadata",
+      "locale_observation"
+    ]
+  },
+  "modes": [
+    "full-browser",
+    "limited-browser",
+    "computer-use",
+    "http",
+    "supplied-evidence",
+    "no-access"
+  ],
+  "defaults": {
+    "session": "reuse_available",
+    "actions": "inspection_and_safe_ui_exploration",
+    "fault_injection": "none",
+    "priority_tasks": "infer_top_three",
+    "budget": {
+      "max_routes": 20,
+      "max_states": 60,
+      "max_journeys": 5,
+      "max_minutes": 45,
+      "max_concurrent_pages": 2,
+      "finding_recheck_attempts": 2,
+      "max_requests": 20,
+      "max_response_bytes": 2000000,
+      "request_timeout_ms": 20000
+    },
+    "evidence": {
+      "network_bodies": "targeted_only",
+      "storage_values": "excluded_by_default",
+      "authentication_export": false,
+      "private_screenshots_in_deliverables": false
+    }
+  },
+  "verification_authority": {
+    "layer": "frontend",
+    "backend_record_checked": false,
+    "unobserved_business_effect_verified": null,
+    "unobserved_unintended_effect_count": null
+  },
+  "runtime": {
+    "node": ">=22.15.0 <25",
+    "tested_node_versions": [
+      "24.22.3"
+    ],
+    "dependencies_optional_for_instructions": true,
+    "schema_engine_required_for_validated_cli": [
+      "ajv@8.17.1",
+      "ajv-formats@3.0.1"
+    ],
+    "html_parser_required_for_collection": "parse5@7.3.0",
+    "bundled_collectors": [
+      "bounded_public_http",
+      "bounded_source_field_inventory"
+    ],
+    "host_adapter_workflows": [
+      "host-browser",
+      "devtools",
+      "playwright",
+      "computer-use",
+      "supplied-evidence"
+    ],
+    "browser_automation_dependency": null
+  },
+  "compatibility_claims": {
+    "skill_host_imports": "not_tested",
+    "browser_adapter_trials": "not_tested",
+    "cross_product_website_compatibility": "not_tested",
+    "actual_trial_evidence_required": true
+  },
+  "maintenance": {
+    "workstream": "QA and frontend engineering",
+    "checked_on": "2026-11-22",
+    "recheck_triggers": [
+      "guide revision",
+      "schema or rule changes",
+      "host import changes",
+      "browser and optional tool changes",
+      "policy effective date"
+    ]
+  }
+}

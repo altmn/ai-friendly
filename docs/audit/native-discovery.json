@@ -1,0 +1,69 @@
+{
+  "before_removal": {
+    "native_protocol": "skills/list",
+    "init_succeeded": true,
+    "error": null,
+    "entries": [
+      {
+        "condition": "candidate",
+        "target_skills": [
+          {
+            "name": "ai-friendly-audit",
+            "description": "Audit websites for AI-agent retrieval and usability. Inspect public and available signed-in frontend states; report evidence, coverage, owner checks, and prioritized fixes.",
+            "interface": {
+              "displayName": "AI Friendly Audit",
+              "shortDescription": "Audit websites for AI-agent usability and retrieval",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $ai-friendly-audit to audit this website and report evidence, coverage, and prioritized fixes."
+            },
+            "path": "<workspace>/codex/candidate/.agents/skills/ai-friendly-audit/SKILL.md",
+            "scope": "repo",
+            "enabled": true,
+            "pluginId": null
+          }
+        ],
+        "errors": []
+      },
+      {
+        "condition": "control",
+        "target_skills": [],
+        "errors": []
+      }
+    ]
+  },
+  "after_removal": {
+    "native_protocol": "skills/list",
+    "init_succeeded": true,
+    "error": null,
+    "entries": [
+      {
+        "condition": "candidate",
+        "target_skills": [],
+        "errors": []
+      },
+      {
+        "condition": "control",
+        "target_skills": [],
+        "errors": []
+      }
+    ]
+  },
+  "entrypoint_sha256": "d2e35c0ba359c44e4fd326f46f280132c9c6e9d21fac8755c5d0b87870bae7da",
+  "all_staged_runtime_hashes_match": true,
+  "claude": {
+    "host": "Claude Code",
+    "host_version": "2.1.98",
+    "catalog_exposed_target": true,
+    "selected_model": "claude-sonnet-4-6",
+    "actual_inference": "not_run",
+    "execution_outcome": "blocked",
+    "reason": "OAuth access token invalid; HTTP 401 on first model call. User directed leaving Claude tests blocked.",
+    "exit_code": 1,
+    "raw_event_sha256": "ee41aeadc055b8786405fd06bad282b3f1036524d5673aeab3e9daf467acee98",
+    "further_cases": "not_run; no retry after user instruction"
+  }
+}

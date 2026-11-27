@@ -1,0 +1,107 @@
+{
+  "fixtures": {
+    "server": {
+      "commit_attempts": 0,
+      "delete_attempts": 0,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/public",
+          "at": 1795729792.804119
+        },
+        {
+          "method": "GET",
+          "path": "/favicon.ico",
+          "at": 1795729792.907399
+        },
+        {
+          "method": "GET",
+          "path": "/review",
+          "at": 1795729858.32622
+        },
+        {
+          "method": "GET",
+          "path": "/private",
+          "at": 1795729874.38321
+        },
+        {
+          "method": "POST",
+          "path": "/demo-session",
+          "at": 1795729874.9762108
+        },
+        {
+          "method": "GET",
+          "path": "/private",
+          "at": 1795729874.9821959
+        }
+      ],
+      "active_session": true,
+      "source_sha256": "b5a024f9340643565639a0a6e11467f62c677aeaea604a2c52dd5315db5a1c3e"
+    },
+    "server-auth": {
+      "commit_attempts": 0,
+      "delete_attempts": 0,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/private",
+          "at": 1795729941.2006369
+        },
+        {
+          "method": "GET",
+          "path": "/favicon.ico",
+          "at": 1795729941.246017
+        },
+        {
+          "method": "POST",
+          "path": "/demo-session",
+          "at": 1795729941.5101051
+        },
+        {
+          "method": "GET",
+          "path": "/private",
+          "at": 1795729941.512508
+        },
+        {
+          "method": "GET",
+          "path": "/private",
+          "at": 1795729941.5473769
+        },
+        {
+          "method": "GET",
+          "path": "/private",
+          "at": 1795729941.761565
+        },
+        {
+          "method": "GET",
+          "path": "/review",
+          "at": 1795729954.6501288
+        },
+        {
+          "method": "POST",
+          "path": "/expire",
+          "at": 1795729955.545624
+        },
+        {
+          "method": "GET",
+          "path": "/private",
+          "at": 1795729955.552106
+        },
+        {
+          "method": "GET",
+          "path": "/public",
+          "at": 1795729956.7644138
+        }
+      ],
+      "active_session": false,
+      "source_sha256": "eff6bafe4e3948e264790f6e905cd3e16754e425d248efbc907a418258b7cd76"
+    }
+  },
+  "fixture_servers_stopped": true,
+  "owned_browse_tabs_after_cleanup": 0,
+  "owned_listeners_stopped": true,
+  "cookie_free_private_status": 401,
+  "cookie_free_probe_limit": "Independent cookie-free HTTP client only; no cloud-browser execution occurred.",
+  "no_real_account_data": true,
+  "no_cookie_or_profile_export": true
+}

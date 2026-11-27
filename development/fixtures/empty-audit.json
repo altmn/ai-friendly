@@ -1,0 +1,650 @@
+{
+  "schema_version": "1.0.0",
+  "run": {
+    "id": "run-example",
+    "started_at": "2026-11-22T23:00:00Z",
+    "completed_at": null,
+    "status": "initialized",
+    "mode": "http",
+    "test_context": "controlled_fixture",
+    "collector": {
+      "name": "ai-friendly-audit-cli",
+      "version": "1.0.0",
+      "runtime": "Node.js 24.22.3"
+    },
+    "target_url": "https://example.com/",
+    "action_envelope": "inspection_and_safe_ui_exploration"
+  },
+  "module": {
+    "id": "ai-friendly-audit-frontend",
+    "version": "1.0.0",
+    "rule_catalog_version": "1.0.0"
+  },
+  "guide": {
+    "revision": "2.0",
+    "source": "Engineering an AI-Agent-Friendly Website \u2014 user-supplied revision 2.0",
+    "checklist_version": "1.0.0"
+  },
+  "goals": [
+    {
+      "profile": "public-retrieval",
+      "guide_goal": "retrieve",
+      "selected": true,
+      "reason": "Initial scope selection; refine from available evidence."
+    },
+    {
+      "profile": "browser-operability",
+      "guide_goal": "operate",
+      "selected": true,
+      "reason": "Initial scope selection; refine from available evidence."
+    },
+    {
+      "profile": "discovery-and-citation",
+      "guide_goal": "discover-and-cite",
+      "selected": true,
+      "reason": "Initial scope selection; refine from available evidence."
+    },
+    {
+      "profile": "frontend-tools",
+      "guide_goal": "integrate",
+      "selected": false,
+      "reason": "Initial scope selection; refine from available evidence."
+    },
+    {
+      "profile": "source-maintainability",
+      "guide_goal": "supporting",
+      "selected": false,
+      "reason": "Initial scope selection; refine from available evidence."
+    }
+  ],
+  "scope": {
+    "allowed_origins": [
+      "https://example.com"
+    ],
+    "excluded_paths": [],
+    "planned_routes": [
+      "https://example.com/"
+    ],
+    "planned_states": [],
+    "priority_tasks": [
+      "Read the initial public document."
+    ],
+    "session": {
+      "status": "anonymous",
+      "credential_exported": false
+    },
+    "viewport": {
+      "width": null,
+      "height": null
+    },
+    "intended_locale": null,
+    "intended_timezone": null,
+    "intended_currency": null,
+    "effective_locale": null,
+    "effective_timezone": null,
+    "effective_currency": null,
+    "content_use_intent": "unknown_unless_supplied",
+    "budgets": {
+      "max_routes": 20,
+      "max_states": 60,
+      "max_journeys": 5,
+      "max_minutes": 45,
+      "max_concurrent_pages": 2,
+      "finding_recheck_attempts": 2,
+      "max_requests": 20,
+      "max_response_bytes": 2000000,
+      "request_timeout_ms": 20000
+    }
+  },
+  "capabilities": {
+    "schema_version": "1.0.0",
+    "id": "capabilities-example",
+    "captured_at": "2026-11-22T23:00:00Z",
+    "conversation_surface": "cli",
+    "execution_location": "unknown",
+    "browser_context": null,
+    "capabilities": {
+      "tab_selection": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "existing_session_attachment": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "browser_observation": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "browser_takeover": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "credential_handoff": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "navigation": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "pointer_input": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "keyboard_input": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "viewport_control": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "screenshots": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "rendered_dom": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "computed_styles": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "computed_accessibility_tree": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "aria_snapshot": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "page_evaluation": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "frame_inspection": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "open_shadow_roots": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "closed_shadow_roots": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "console_errors": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "network_metadata": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "response_bodies": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "service_worker_attribution": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "request_timing": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "storage_metadata": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "cookie_attributes": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "indexeddb_metadata": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "cache_metadata": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "performance_traces": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "accessibility_scanner": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "lighthouse": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "agentic_browsing": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "webmcp_inspection": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "terminal": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "filesystem": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "http_retrieval": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "network_egress": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "original_source": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "initial_response": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "actual_extractor_output": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "alternate_representations": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "extraction_metadata": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      },
+      "locale_observation": {
+        "status": "not_attempted",
+        "reason": "No probe performed in this initialized example."
+      }
+    }
+  },
+  "states": [],
+  "evidence": [],
+  "checks": [],
+  "findings": [],
+  "journeys": [],
+  "representation_comparisons": [],
+  "compatibility_tests": [],
+  "owner_verification": [],
+  "guide_coverage": [
+    {
+      "checklist_id": "G-A01",
+      "subject": "Guide Appendix A item 1",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A02",
+      "subject": "Guide Appendix A item 2",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A03",
+      "subject": "Guide Appendix A item 3",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A04",
+      "subject": "Guide Appendix A item 4",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A05",
+      "subject": "Guide Appendix A item 5",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A06",
+      "subject": "Guide Appendix A item 6",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A07",
+      "subject": "Guide Appendix A item 7",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A08",
+      "subject": "Guide Appendix A item 8",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A09",
+      "subject": "Guide Appendix A item 9",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A10",
+      "subject": "Guide Appendix A item 10",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A11",
+      "subject": "Guide Appendix A item 11",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A12",
+      "subject": "Guide Appendix A item 12",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A13",
+      "subject": "Guide Appendix A item 13",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A14",
+      "subject": "Guide Appendix A item 14",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A15",
+      "subject": "Guide Appendix A item 15",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A16",
+      "subject": "Guide Appendix A item 16",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A17",
+      "subject": "Guide Appendix A item 17",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A18",
+      "subject": "Guide Appendix A item 18",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A19",
+      "subject": "Guide Appendix A item 19",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A20",
+      "subject": "Guide Appendix A item 20",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A21",
+      "subject": "Guide Appendix A item 21",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A22",
+      "subject": "Guide Appendix A item 22",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A23",
+      "subject": "Guide Appendix A item 23",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A24",
+      "subject": "Guide Appendix A item 24",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A25",
+      "subject": "Guide Appendix A item 25",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    },
+    {
+      "checklist_id": "G-A26",
+      "subject": "Guide Appendix A item 26",
+      "guide_sections": [
+        "Appendix A"
+      ],
+      "applicability": "unknown",
+      "disposition": "untested",
+      "rule_ids": [],
+      "check_ids": [],
+      "owner_verification_ids": [],
+      "reason": "Scope and applicable catalog rules have not been evaluated."
+    }
+  ],
+  "coverage": {
+    "planned_check_instances": 0,
+    "executed_check_instances": 0,
+    "check_outcomes": {
+      "passed": 0,
+      "failed": 0,
+      "cantTell": 0,
+      "inapplicable": 0,
+      "untested": 0
+    },
+    "planned_state_count": 0,
+    "observed_state_count": 0,
+    "guide_requirement_count": 26,
+    "applicable_guide_requirements": 0,
+    "frontend_assessed_guide_requirements": 0,
+    "owner_verification_required_count": 0,
+    "successful_trials": 0,
+    "total_trials": 0,
+    "material_error_trials": 0,
+    "unresolved_trials": 0
+  },
+  "verdicts": [],
+  "limitations": [
+    "Initialized contract example only; no website audit has occurred."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "outcome": "passed",
+  "meaning": "Actual extractor ran; deliberately seeded representation mismatch and qualifier loss were detected.",
+  "name": "Mozilla Readability",
+  "version": "0.6.0",
+  "parser": "Bundled JSDOMParser; no script execution or network",
+  "options": "Readability defaults; charThreshold 500",
+  "license": "Apache-2.0",
+  "package_url": "https://registry.npmjs.org/@mozilla/readability/-/readability-0.6.0.tgz",
+  "package_sha256": "6d3c3cc50dad51b543925deadc66d5b58cd2262d1d585f2ae0a44975627ad919",
+  "registry_integrity": "sha512-juG5VWh4qAivzTAeMzvY9xs9HY5rAcr2E4I7tiSSCokRFi7XIZCAu92ZkSTsIj1OPceCifL3cpfteP3pDT9/QQ==",
+  "integrity_verified": true,
+  "source_hashes": {
+    "Readability.js": "34dcab3d0832d0019f02990eed6b6124e029e8c32b9f0c6f2550544ff8dff174",
+    "JSDOMParser.js": "6b8eae46939f187ef4565c67f452a9098211daea80e50c9aea74d72015b73680",
+    "package.json": "03c0d0f4786f73f1928024baa179f7e5a363da9f819368253de4c3d712ddf632"
+  },
+  "input_sha256": "7aebb2284d81a6e6d9102113560ccb5eb5c74dd849cb7030191d233e2339c56a",
+  "output_sha256": "92484e6a6dcf21d0f539e159fb8ed510572641df78939dc9aef1755fe413d690",
+  "observed": {
+    "initial_price": "41 CAD per editor per month",
+    "extracted_price": "41 CAD per editor per month",
+    "rendered_price": "43 CAD per editor per month.",
+    "source_footer": "Minimum six editors; New Zealand organizations only.",
+    "extracted_footer_qualifiers_present": false,
+    "terms_link_preserved": true
+  },
+  "execution_boundary": "Private evaluator-only download/extraction; integrity and source reviewed; no lifecycle scripts or project dependency changes. Parser executes no scripts/network.",
+  "browser": {
+    "at": "2026-11-26T22:41:14.719Z",
+    "url": "http://127.0.0.1:64506/extractor-medium.html",
+    "observed": {
+      "footer": "Minimum six editors; New Zealand organizations only.",
+      "price": "43 CAD per editor per month.",
+      "terms": "https://example.test/terms",
+      "title": "extractor fixture"
+    },
+    "cleanup": "owned tab closed"
+  },
+  "primary_documentation": "https://github.com/mozilla/readability",
+  "limits": [
+    "One author-written synthetic page; parser choice and extraction heuristics limit generalization.",
+    "Native actors compared provided observations; their own outputs are not fresh browser/extractor runs."
+  ]
+}

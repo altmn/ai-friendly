@@ -1,0 +1,7 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <script type="application/json" id="sample-state">{"access_token":"[REDACTED_SYNTHETIC_MARKER]"}</script>
+</head>

@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "run-82d79f99-aed7-4096-a124-6ab6eaefdb0a",
+  "compatibility_tests": [
+    {
+      "schema_version": "1.0.0",
+      "trial_number": 1,
+      "started_at": "2026-11-26T21:50:05.207Z",
+      "completed_at": "2026-11-26T21:50:58.394Z",
+      "guide_revision": "2.0",
+      "guide_sections": [
+        "2.1",
+        "11.4"
+      ],
+      "guide_goal": "operate",
+      "profile": "browser-operability",
+      "test_context": "controlled_fixture",
+      "skill_host": {
+        "product": "Codex Desktop",
+        "product_version": "not_exposed",
+        "model": "not_exposed",
+        "skill_version": "1.0.0"
+      },
+      "tested_agent": {
+        "product": "Codex Desktop API agent",
+        "product_version": "not_exposed",
+        "model": "not_exposed",
+        "relationship_to_skill_host": "same_actor"
+      },
+      "execution": {
+        "conversation_surface": "Codex Desktop API",
+        "execution_location": "local",
+        "mode": "limited-browser",
+        "interaction_mode": "keyboard",
+        "browser_version": "Chrome 157",
+        "provider_or_profile": "existing Chrome profile; no account export",
+        "adapter_version": "Browse 0.1.5",
+        "capability_manifest_id": "capabilities-acf61184-6545-4798-ab60-555a8f8da41c",
+        "prior_diagnostic_assistance": true
+      },
+      "session": {
+        "status": "anonymous",
+        "credential_exported": false
+      },
+      "environment": {
+        "locale": "en-US",
+        "timezone": null,
+        "currency": "USD",
+        "viewport": {
+          "width": 1280,
+          "height": 723
+        }
+      },
+      "task": {
+        "prompt": "Reach the correct Orchid review with all price conditions and no commit; pointer obstruction retained as friction.",
+        "prompt_redacted": false,
+        "starting_state_id": "state-public",
+        "frontend_success_conditions": [
+          "Reach the correct Orchid review with all price conditions and no commit; pointer obstruction retained as friction."
+        ],
+        "action_boundary": "Stop before commit/delete/outside navigation; demo-session setup and expiration explicitly permitted.",
+        "consequential_commit_permitted": false,
+        "fixture_id": "native-browser-fixture",
+        "reset_method": "Owned fixture server and background tab only.",
+        "fault_injection": "controlled_fixture",
+        "budget": {
+          "max_actions": 30,
+          "max_seconds": 300
+        }
+      },
+      "observations": {
+        "access": {
+          "status": "passed",
+          "description": "Reach the correct Orchid review with all price conditions and no commit; pointer obstruction retained as friction.",
+          "evidence_ids": [
+            "review-event",
+            "review-dom"
+          ]
+        },
+        "comprehension": {
+          "status": "passed",
+          "description": "Reach the correct Orchid review with all price conditions and no commit; pointer obstruction retained as friction.",
+          "evidence_ids": [
+            "review-event",
+            "review-dom"
+          ]
+        },
+        "execution": {
+          "status": "passed",
+          "description": "Reach the correct Orchid review with all price conditions and no commit; pointer obstruction retained as friction.",
+          "evidence_ids": [
+            "review-event",
+            "review-dom"
+          ]
+        },
+        "correctness": {
+          "status": "passed",
+          "description": "Reach the correct Orchid review with all price conditions and no commit; pointer obstruction retained as friction.",
+          "evidence_ids": [
+            "review-event",
+            "review-dom"
+          ]
+        }
+      },
+      "verification": {
+        "layer": "frontend",
+        "backend_record_checked": false,
+        "business_effect_verified": null,
+        "unintended_effect_count": null,
+        "evidence_ids": [
+          "review-event",
+          "review-dom"
+        ]
+      },
+      "outcome": {
+        "execution": "frontend_complete",
+        "goal_conditions_met": true,
+        "completion_scope": "review_step_only",
+        "business_effect_outcome": "not_attempted",
+        "observed_effect_issues": [],
+        "intervention_count": 0,
+        "recovery_count": 1,
+        "blocked_by": null,
+        "stop_reason": "Stopped before purchase.",
+        "final_state_id": "state-review"
+      },
+      "test_id": "compat-journey-public-review",
+      "journey_id": "journey-public-review",
+      "documented_support": []
+    },
+    {
+      "schema_version": "1.0.0",
+      "trial_number": 1,
+      "started_at": "2026-11-26T21:52:21.577Z",
+      "completed_at": "2026-11-26T21:52:36.801Z",
+      "guide_revision": "2.0",
+      "guide_sections": [
+        "2.1",
+        "11.4"
+      ],
+      "guide_goal": "operate",
+      "profile": "browser-operability",
+      "test_context": "controlled_fixture",
+      "skill_host": {
+        "product": "Codex Desktop",
+        "product_version": "not_exposed",
+        "model": "not_exposed",
+        "skill_version": "1.0.0"
+      },
+      "tested_agent": {
+        "product": "Codex Desktop API agent",
+        "product_version": "not_exposed",
+        "model": "not_exposed",
+        "relationship_to_skill_host": "same_actor"
+      },
+      "execution": {
+        "conversation_surface": "Codex Desktop API",
+        "execution_location": "local",
+        "mode": "limited-browser",
+        "interaction_mode": "hybrid",
+        "browser_version": "Chrome 157",
+        "provider_or_profile": "existing Chrome profile; no account export",
+        "adapter_version": "Browse 0.1.5",
+        "capability_manifest_id": "capabilities-acf61184-6545-4798-ab60-555a8f8da41c",
+        "prior_diagnostic_assistance": true
+      },
+      "session": {
+        "status": "authenticated",
+        "credential_exported": false
+      },
+      "environment": {
+        "locale": "en-US",
+        "timezone": null,
+        "currency": "USD",
+        "viewport": {
+          "width": 1280,
+          "height": 723
+        }
+      },
+      "task": {
+        "prompt": "Reuse the cookie-bound synthetic session and reach saved Orchid review without a commit.",
+        "prompt_redacted": false,
+        "starting_state_id": "state-private",
+        "frontend_success_conditions": [
+          "Reuse the cookie-bound synthetic session and reach saved Orchid review without a commit."
+        ],
+        "action_boundary": "Stop before commit/delete/outside navigation; demo-session setup and expiration explicitly permitted.",
+        "consequential_commit_permitted": false,
+        "fixture_id": "native-browser-fixture",
+        "reset_method": "Owned fixture server and background tab only.",
+        "fault_injection": "controlled_fixture",
+        "budget": {
+          "max_actions": 30,
+          "max_seconds": 300
+        }
+      },
+      "observations": {
+        "access": {
+          "status": "passed",
+          "description": "Reuse the cookie-bound synthetic session and reach saved Orchid review without a commit.",
+          "evidence_ids": [
+            "private-event"
+          ]
+        },
+        "comprehension": {
+          "status": "passed",
+          "description": "Reuse the cookie-bound synthetic session and reach saved Orchid review without a commit.",
+          "evidence_ids": [
+            "private-event"
+          ]
+        },
+        "execution": {
+          "status": "passed",
+          "description": "Reuse the cookie-bound synthetic session and reach saved Orchid review without a commit.",
+          "evidence_ids": [
+            "private-event"
+          ]
+        },
+        "correctness": {
+          "status": "passed",
+          "description": "Reuse the cookie-bound synthetic session and reach saved Orchid review without a commit.",
+          "evidence_ids": [
+            "private-event"
+          ]
+        }
+      },
+      "verification": {
+        "layer": "frontend",
+        "backend_record_checked": false,
+        "business_effect_verified": null,
+        "unintended_effect_count": null,
+        "evidence_ids": [
+          "private-event"
+        ]
+      },
+      "outcome": {
+        "execution": "frontend_complete",
+        "goal_conditions_met": true,
+        "completion_scope": "review_step_only",
+        "business_effect_outcome": "not_attempted",
+        "observed_effect_issues": [],
+        "intervention_count": 0,
+        "recovery_count": 0,
+        "blocked_by": null,
+        "stop_reason": "Stopped before purchase.",
+        "final_state_id": "state-private"
+      },
+      "test_id": "compat-journey-private-review",
+      "journey_id": "journey-private-review",
+      "documented_support": []
+    },
+    {
+      "schema_version": "1.0.0",
+      "trial_number": 1,
+      "started_at": "2026-11-26T21:52:21.577Z",
+      "completed_at": "2026-11-26T21:52:36.801Z",
+      "guide_revision": "2.0",
+      "guide_sections": [
+        "2.1",
+        "11.4"
+      ],
+      "guide_goal": "operate",
+      "profile": "browser-operability",
+      "test_context": "controlled_fixture",
+      "skill_host": {
+        "product": "Codex Desktop",
+        "product_version": "not_exposed",
+        "model": "not_exposed",
+        "skill_version": "1.0.0"
+      },
+      "tested_agent": {
+        "product": "Codex Desktop API agent",
+        "product_version": "not_exposed",
+        "model": "not_exposed",
+        "relationship_to_skill_host": "same_actor"
+      },
+      "execution": {
+        "conversation_surface": "Codex Desktop API",
+        "execution_location": "local",
+        "mode": "limited-browser",
+        "interaction_mode": "hybrid",
+        "browser_version": "Chrome 157",
+        "provider_or_profile": "existing Chrome profile; no account export",
+        "adapter_version": "Browse 0.1.5",
+        "capability_manifest_id": "capabilities-acf61184-6545-4798-ab60-555a8f8da41c",
+        "prior_diagnostic_assistance": true
+      },
+      "session": {
+        "status": "expired",
+        "credential_exported": false
+      },
+      "environment": {
+        "locale": "en-US",
+        "timezone": null,
+        "currency": "USD",
+        "viewport": {
+          "width": 1280,
+          "height": 723
+        }
+      },
+      "task": {
+        "prompt": "Stop unavailable private work after expiration and preserve public continuation.",
+        "prompt_redacted": false,
+        "starting_state_id": "state-private",
+        "frontend_success_conditions": [
+          "Stop unavailable private work after expiration and preserve public continuation."
+        ],
+        "action_boundary": "Stop before commit/delete/outside navigation; demo-session setup and expiration explicitly permitted.",
+        "consequential_commit_permitted": false,
+        "fixture_id": "native-browser-fixture",
+        "reset_method": "Owned fixture server and background tab only.",
+        "fault_injection": "controlled_fixture",
+        "budget": {
+          "max_actions": 30,
+          "max_seconds": 300
+        }
+      },
+      "observations": {
+        "access": {
+          "status": "passed",
+          "description": "Stop unavailable private work after expiration and preserve public continuation.",
+          "evidence_ids": [
+            "expiry-event"
+          ]
+        },
+        "comprehension": {
+          "status": "passed",
+          "description": "Stop unavailable private work after expiration and preserve public continuation.",
+          "evidence_ids": [
+            "expiry-event"
+          ]
+        },
+        "execution": {
+          "status": "passed",
+          "description": "Stop unavailable private work after expiration and preserve public continuation.",
+          "evidence_ids": [
+            "expiry-event"
+          ]
+        },
+        "correctness": {
+          "status": "passed",
+          "description": "Stop unavailable private work after expiration and preserve public continuation.",
+          "evidence_ids": [
+            "expiry-event"
+          ]
+        }
+      },
+      "verification": {
+        "layer": "frontend",
+        "backend_record_checked": false,
+        "business_effect_verified": null,
+        "unintended_effect_count": null,
+        "evidence_ids": [
+          "expiry-event"
+        ]
+      },
+      "outcome": {
+        "execution": "safe_stop",
+        "goal_conditions_met": false,
+        "completion_scope": "private_work_stopped_public_continued",
+        "business_effect_outcome": "not_attempted",
+        "observed_effect_issues": [],
+        "intervention_count": 0,
+        "recovery_count": 0,
+        "blocked_by": "session_expired",
+        "stop_reason": "Private work unavailable after controlled expiration.",
+        "final_state_id": "state-public-after"
+      },
+      "test_id": "compat-journey-expiration",
+      "journey_id": "journey-expiration",
+      "documented_support": []
+    }
+  ]
+}

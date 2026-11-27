@@ -1,0 +1,231 @@
+{
+  "version": "1.0.0",
+  "root_directory": "ai-friendly-audit",
+  "files": [
+    {
+      "path": "ai-friendly-audit/LICENSE",
+      "bytes": 1081,
+      "sha256": "e56dbe149be30936ee94106365c5ee6f3039f6a57fefc4d4d8c21cbdd10a10f3"
+    },
+    {
+      "path": "ai-friendly-audit/NOTICE.md",
+      "bytes": 687,
+      "sha256": "680b994cfe9166bde86df6c49a648e41af3796dbd55f8c7b7576dc34033588f3"
+    },
+    {
+      "path": "ai-friendly-audit/SKILL.md",
+      "bytes": 12953,
+      "sha256": "bdf2f928eaa2f1f70d6c5a15de4b436da26f08652611c850f5626981f470ba9f"
+    },
+    {
+      "path": "ai-friendly-audit/agents/openai.yaml",
+      "bytes": 241,
+      "sha256": "2879b64c2735c8457a78c16e2185e11323733ed70545801155dd33cb10f0d5c8"
+    },
+    {
+      "path": "ai-friendly-audit/assets/compatibility-test-template.yaml",
+      "bytes": 3434,
+      "sha256": "4d471f373747ef4f2cbb14f962065959330dc2454497352de2c689341d2fa070"
+    },
+    {
+      "path": "ai-friendly-audit/assets/module.json",
+      "bytes": 5319,
+      "sha256": "ac45800702f9a81863f73451bd7d0b1c6a90c87eaab170734ae6fe20e8a6bd49"
+    },
+    {
+      "path": "ai-friendly-audit/assets/report-template.md",
+      "bytes": 6803,
+      "sha256": "3144ed1180258b51cc215f82b4d1caba053b72679effd993f08c775033bc4c81"
+    },
+    {
+      "path": "ai-friendly-audit/assets/rules/frontend-v1.json",
+      "bytes": 238230,
+      "sha256": "8853a554d83fc3497fe34f5af4947b8736236d4c56663776d3aa2dfb0a8c3e89"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/capability.schema.json",
+      "bytes": 2231,
+      "sha256": "a21a34387d61ea45db64a27a2b7533cdc403f8be0c73687186e409bacfc80590"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/check.schema.json",
+      "bytes": 4052,
+      "sha256": "ffa5a5953763769f1d0cc5a3d8b4aa5f27eb0a25ba94c5730481e8c67dc9a394"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/common.schema.json",
+      "bytes": 20126,
+      "sha256": "e41db51e396809fc00598666ac79e7363f4a100121e3b1aa8bd587382edf9a1c"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/compatibility-test.schema.json",
+      "bytes": 3856,
+      "sha256": "060081352e4dd725c7e096b6008a436c1d52657ca2669c32552a80a1f3639495"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/compatibility-tests.schema.json",
+      "bytes": 775,
+      "sha256": "2962b61697a6eacd02092207f0a538af4714f657ca32682bbd550cb2363bfac1"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/evidence-index.schema.json",
+      "bytes": 906,
+      "sha256": "5b97f23a10027929f59ba4c6de80e48ef837175231ed5fd2e3c80102c8c1bc41"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/evidence.schema.json",
+      "bytes": 4064,
+      "sha256": "1208321350f4e4691d67b549e7fd4788958eabd872b96c25c9a95bd2d7516e9d"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/finding.schema.json",
+      "bytes": 4252,
+      "sha256": "642d349a112d78c9c23154318ef2fd0b4ea411f641c0f187f5a59eb4610c3e90"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/guide-coverage.schema.json",
+      "bytes": 1726,
+      "sha256": "7cb7538c913ffef7db503024ec763494562e282ade88b4927dba9295b06ad38e"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/journey.schema.json",
+      "bytes": 3490,
+      "sha256": "ba30a8bd98f27e005a1a3b27e9942afdc5a86999da2b44cc9fc37b3acf69cb17"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/owner-verification.schema.json",
+      "bytes": 4247,
+      "sha256": "b79b87ed144d942092b28601be38560536d65b3bb22acfe174e0ace7bd4593c2"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/report.schema.json",
+      "bytes": 18169,
+      "sha256": "df2f038f6c619a5c4062f242677ef00ddb371020bf856bc0c4f2fb94d1485340"
+    },
+    {
+      "path": "ai-friendly-audit/assets/schemas/rule-catalog.schema.json",
+      "bytes": 8567,
+      "sha256": "d2171d98ebfd0a321c2e1ef6c5d78e1c402aabe9feea64a2109cb32edadb20e9"
+    },
+    {
+      "path": "ai-friendly-audit/package-lock.json",
+      "bytes": 4187,
+      "sha256": "bd51972a9862a3b842f76dedc89b0ac98a2a37f9cdc830fcbb98b635bf67f0c7"
+    },
+    {
+      "path": "ai-friendly-audit/package.json",
+      "bytes": 626,
+      "sha256": "2e29cc126232430a23467cec73bcac7111d7c428bd6ef3aecd3d484aa7203833"
+    },
+    {
+      "path": "ai-friendly-audit/references/ai-friendly-audit-frontend.md",
+      "bytes": 12316,
+      "sha256": "b030eab26e46a949263d06541e9f18abbe26c3bfce58601234f2c93982f084e7"
+    },
+    {
+      "path": "ai-friendly-audit/references/authentication-and-scope.md",
+      "bytes": 8295,
+      "sha256": "5015a7bcc85660143c62863261c15046ef52e0f1cff0052e42490a7fb1c1fe0e"
+    },
+    {
+      "path": "ai-friendly-audit/references/browser-adapters.md",
+      "bytes": 11056,
+      "sha256": "6646f0dce1b70226f32e94c784268e670efdbf3e58f43902a0f4cd9248b715df"
+    },
+    {
+      "path": "ai-friendly-audit/references/degraded-environments.md",
+      "bytes": 6316,
+      "sha256": "eb864462a3a5cb236b3bcb747a02a25a3c27660a9af02793a3fb064c5ba10d0b"
+    },
+    {
+      "path": "ai-friendly-audit/references/evidence-and-reporting.md",
+      "bytes": 14746,
+      "sha256": "991780505b5e153beaff18765098e0b4cf6f3a5661829a621372d6e2d8504a96"
+    },
+    {
+      "path": "ai-friendly-audit/references/evidence-contract.md",
+      "bytes": 2229,
+      "sha256": "6f3e5bd94784885fe5424dccac8ba0b709ff73f17e923f5277be00b099461097"
+    },
+    {
+      "path": "ai-friendly-audit/references/frontend-rules.md",
+      "bytes": 154229,
+      "sha256": "9abda5be431a43e32b6f461eee5b9afdf1bf5b7beb1bdeb8a7622b9a0d8df48e"
+    },
+    {
+      "path": "ai-friendly-audit/references/platform-compatibility.md",
+      "bytes": 7428,
+      "sha256": "c58d4d67f098cab223e7d2f316637fc49ff626735accd9cac3d4f803b7b82c3b"
+    },
+    {
+      "path": "ai-friendly-audit/references/retrieval-and-policy.md",
+      "bytes": 10398,
+      "sha256": "4d812d6dd0ce16a58c311bce2f4ed31681fa47a43fc07f82ae1124241eb2c7ee"
+    },
+    {
+      "path": "ai-friendly-audit/references/source-review.md",
+      "bytes": 4723,
+      "sha256": "af8448517a37eaa6a6da9ec31dfec3c6fea694abab7331c84aba088f021aa3c6"
+    },
+    {
+      "path": "ai-friendly-audit/references/supplied-source.md",
+      "bytes": 5400,
+      "sha256": "daf133cfa1b2566ccde6387fb449994b7a92160a8a7c9f7a30f3cf733d3f2a3e"
+    },
+    {
+      "path": "ai-friendly-audit/references/transaction-observability.md",
+      "bytes": 8046,
+      "sha256": "31bc8987da1e007d7a120939cf66326b9b1940eb203ad64ab6530842a443c25f"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/audit.mjs",
+      "bytes": 14950,
+      "sha256": "16ecb2f2d8931046a62f666fb18b6d73587968f1a2f849f17d0c10d51ceb78b8"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/lib/collect.mjs",
+      "bytes": 13654,
+      "sha256": "e33e405f3ec0c2517007e80e9d442e60f625a32426e369085fb517ae4aeb29b4"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/lib/http.mjs",
+      "bytes": 12347,
+      "sha256": "ad03e323ee6ab7e1865875df2d73cb0c7dba4f38ad2c4d2a0cc19a8456cbe4a1"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/lib/io.mjs",
+      "bytes": 5881,
+      "sha256": "a98f606f3a53cd7640d17f14ab020cbece05629502d8594566e810f3cb9ace86"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/lib/model.mjs",
+      "bytes": 9798,
+      "sha256": "5f1e8e76f89d2fa9cfc8ab8064a2db6dd528dff5b7804092bf98ad388fde7c47"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/lib/privacy.mjs",
+      "bytes": 4594,
+      "sha256": "6b3b5fc5410485594256d6797bf1af615f9b7f8570c8943e5343d58684982e91"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/lib/render-rules.mjs",
+      "bytes": 10926,
+      "sha256": "a82edbdf95b3a96536086900faa92e275827af0530691d30f9b1d109efa506e0"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/lib/report.mjs",
+      "bytes": 16257,
+      "sha256": "ecc41554a5d84a9a091d82e60955dd13df01b013b77abe2d8ea58db7c2fb2a5e"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/lib/source-view.mjs",
+      "bytes": 4453,
+      "sha256": "19993df0d1d5d15f5a8ca81cda7fb2367dbbe0cabee0dc837d9f34afd61ce982"
+    },
+    {
+      "path": "ai-friendly-audit/scripts/lib/validation.mjs",
+      "bytes": 23934,
+      "sha256": "88e578373a4a2f7998dab029688202a5ff4f7903dbc227cafde599f1d38c090a"
+    }
+  ]
+}

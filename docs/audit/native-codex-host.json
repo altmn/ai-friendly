@@ -1,0 +1,163 @@
+{
+  "schema_version": "2.0",
+  "record_type": "host-capabilities",
+  "format": "project-specific capability record; not native host config",
+  "target": {
+    "product": "Codex CLI",
+    "surface": "local CLI",
+    "distribution": "disposable project-scoped skill",
+    "version": "0.170.0",
+    "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "policy": {
+      "controlled_fixture_only": true,
+      "live_installation": false
+    },
+    "missing_details": [
+      "Model version not exposed in Codex CLI events."
+    ]
+  },
+  "artifact": {
+    "artifact_id": "ai-friendly-runtime-cbd3800",
+    "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+    "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+    "activated_source": "disposable project/.agents/skills/ai-friendly-audit/SKILL.md",
+    "activated_sha256": "d2e35c0ba359c44e4fd326f46f280132c9c6e9d21fac8755c5d0b87870bae7da",
+    "missing_identity_reason": null
+  },
+  "documented_at": "2026-11-26T22:10:52.501179+00:00",
+  "tested_at": "2026-11-26T22:10:52.501179+00:00",
+  "capabilities": {
+    "native_skill_discovery": {
+      "availability": "supported",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [
+        "0.170.0"
+      ],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Native catalog enumeration exposed the candidate.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-discovery.json",
+            "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "Native catalog enumeration exposed the candidate."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    },
+    "read_files": {
+      "availability": "supported",
+      "implementation": "Observed host route for this bounded pilot only.",
+      "documented_version_range": null,
+      "tested_versions": [
+        "0.170.0"
+      ],
+      "test_case_ids": [
+        "AUD-007-NATIVE-PILOT"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Complete exact entrypoint and resource reads observed.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/native-cli-results.json",
+            "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+            "observed_at": "2026-11-26T22:10:52.501179+00:00",
+            "scope": "Complete exact entrypoint and resource reads observed."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve unavailable or blocked evidence; never infer a pass.",
+      "documentation_sources": [
+        "docs/audit/native-acceptance.md"
+      ]
+    }
+  },
+  "claims": {
+    "format": {
+      "outcome": "passed",
+      "reason": "Actual native catalog parsed the skill.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-discovery.json",
+          "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Actual native catalog parsed the skill."
+        }
+      ]
+    },
+    "discovery": {
+      "outcome": "passed",
+      "reason": "Native skills/list exposed exactly one target in the candidate and none in the control; removal verified.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-discovery.json",
+          "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Native skills/list exposed exactly one target in the candidate and none in the control; removal verified."
+        }
+      ]
+    },
+    "functional": {
+      "outcome": "passed",
+      "reason": "Explicit, automatic and fresh re-invocation read the complete exact entrypoint and produced restricted reports.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Explicit, automatic and fresh re-invocation read the complete exact entrypoint and produced restricted reports."
+        }
+      ]
+    },
+    "safety": {
+      "outcome": "passed",
+      "reason": "Sampled final outputs omit the seeded value; browser commit/delete counters remain zero.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Sampled final outputs omit the seeded value; browser commit/delete counters remain zero."
+        }
+      ]
+    },
+    "support": {
+      "outcome": "inconclusive",
+      "reason": "Scoped pilot evidence only; full cross-host acceptance and broad reliability remain incomplete.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Scoped pilot evidence only; full cross-host acceptance and broad reliability remain incomplete."
+        }
+      ]
+    }
+  },
+  "maintenance": {
+    "commitment": "none",
+    "version_range": null,
+    "owner": null,
+    "repair_guide": null
+  },
+  "documentation_sources": [
+    "docs/audit/native-acceptance.md"
+  ]
+}

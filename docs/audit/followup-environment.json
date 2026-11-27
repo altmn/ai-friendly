@@ -1,0 +1,42 @@
+{
+  "observed_at": "2026-11-26T22:54:01.353Z",
+  "cloud_configurations": {
+    "entries": 2,
+    "unique_configurations": 1,
+    "all_ready": true,
+    "all_runnable": true,
+    "repository_bindings": 0,
+    "next_cursor": null
+  },
+  "cloud_browser_execution": {
+    "outcome": "blocked",
+    "reason": "Available tool enumerates saved configurations, explicitly not running computers. No remote browser-control/execution surface is exposed; local Chrome and a cookie-free HTTP client are not cloud-browser evidence.",
+    "executed": false
+  },
+  "cleanup": {
+    "fixture_server_pid": 67802,
+    "fixture_server_exit_code": 143,
+    "port": 64506,
+    "listener_absent_after_stop": true,
+    "owned_browser_tabs_closed": true,
+    "native_controller_pids_absent": [
+      80690,
+      80696,
+      81492
+    ],
+    "native_server_pid_absent": 80697,
+    "owned_workspace_open_handles": 0,
+    "private_staged_bytes_retained": true,
+    "live_extra_root_changes": false
+  },
+  "security": {
+    "claude_calls": 0,
+    "auth_files_copied": false,
+    "live_config_writes": false,
+    "security_hooks_retained": true,
+    "common_user_policy_retained": true
+  },
+  "limits": [
+    "Cloud execution unavailable; common user policy/security hooks retained."
+  ]
+}

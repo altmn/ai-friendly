@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-26T22:28:48.298Z",
+  "url": "http://127.0.0.1:64506/extractor.html",
+  "observed": {
+    "footer": "Minimum four editors; Canadian organizations only.",
+    "price": "37 USD per editor per month.",
+    "terms": "https://example.test/terms",
+    "title": "extractor fixture"
+  },
+  "snapshot": "- heading \"Research plan\" [level=1]\n  - heading \"Research collaboration\" [level=2]\n    - p \"Our research plan supports shared projects, careful citation and collaborative review. Teams compare meaningful facts with all their conditions before making decisions. This...\"\n    - p \"Our research plan supports shared projects, careful citation and collaborative review. Teams compare meaningful facts with all their conditions before making decisions. This...\"\n    - p \"Our research plan supports shared projects, careful citation and collaborative review. Teams compare meaningful facts with all their conditions before making decisions. This...\"\n    - p \"Our research plan supports shared projects, careful citation and collaborative review. Teams compare meaningful facts with all their conditions before making decisions. This...\"\n    - p \"Our research plan supports shared projects, careful citation and collaborative review. Teams compare meaningful facts with all their conditions before making decisions. This...\"\n    - p \"37 USD per editor per month.\"\n    - p \"Terms: Read terms.\"\n    - link \"Read terms\" [ref=e1]",
+  "cleanup": "owned tab closed"
+}

@@ -1,0 +1,22 @@
+name: Local contracts and packaging
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '24.22.3'
+      - run: npm ci --prefix ai-friendly-audit --ignore-scripts --no-audit --no-fund
+      - run: npm run generate
+      - run: npm test
+      - run: python3 -m unittest discover -s development/native_acceptance -p 'test_*.py' -v
+      - run: npm run check
+      - run: python3 development/package_release.py --package-root ai-friendly-audit --out dist
+      - run: git diff --exit-code
+      - run: git diff --check

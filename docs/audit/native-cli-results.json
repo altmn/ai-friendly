@@ -1,0 +1,330 @@
+{
+  "candidate_commit": "cbd380033bc095886b97041f604149335d699d62",
+  "attempts": [
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex-unrooted-preflight",
+      "case": "explicit",
+      "condition": "candidate",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:49:44.325526+00:00",
+      "elapsed_seconds": 62.4210250377655,
+      "observable_command_items": 7,
+      "checks": {
+        "full_entrypoint_read": true,
+        "price_and_conditions": true,
+        "no_seeded_value_in_final": true,
+        "zero_tools": false
+      },
+      "usage": [
+        {
+          "input_tokens": 308119,
+          "cached_input_tokens": 237056,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2510,
+          "reasoning_output_tokens": 175
+        }
+      ],
+      "raw_event_sha256": "4650f64136e2635c3a4e7eba1df7dd618563cc66155096a396f2f102e25db065",
+      "final_sha256": "701d7433fe5f28dd93151e9634085e12a6ac2c0b01024b98b392aad8db8e827c",
+      "score_status": "preflight retained; unrooted discovery setup excluded from routing metrics"
+    },
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex-unrooted-preflight",
+      "case": "automatic",
+      "condition": "candidate",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:50:46.747239+00:00",
+      "elapsed_seconds": 23.236778020858765,
+      "observable_command_items": 2,
+      "checks": {
+        "full_entrypoint_read": false,
+        "price_and_conditions": true,
+        "no_seeded_value_in_final": true,
+        "zero_tools": false
+      },
+      "usage": [
+        {
+          "input_tokens": 92191,
+          "cached_input_tokens": 67968,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 791,
+          "reasoning_output_tokens": 46
+        }
+      ],
+      "raw_event_sha256": "b321c2fe0ce9bfdf471e44c57d608a8331d5e41c01185f66ecc94e197b366bf9",
+      "final_sha256": "71e56cdf21b706d17a281951b95079e6043d0b512fa8e0fcc89cf616e39bb84e",
+      "score_status": "preflight retained; unrooted discovery setup excluded from routing metrics"
+    },
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex-unrooted-preflight",
+      "case": "optout",
+      "condition": "candidate",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:51:09.984437+00:00",
+      "elapsed_seconds": 5.074066877365112,
+      "observable_command_items": 0,
+      "checks": {
+        "full_entrypoint_read": false,
+        "price_and_conditions": false,
+        "no_seeded_value_in_final": true,
+        "zero_tools": true
+      },
+      "usage": [
+        {
+          "input_tokens": 30317,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 17,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "raw_event_sha256": "78847a21d3b4095428d21b5f388a9388df3e76a956828bd6b9460618a8879fc2",
+      "final_sha256": "9df98dd41684b706af1d4034942b60fa9b58e09311656d5342e6a39f6e7b51d6",
+      "score_status": "preflight retained; unrooted discovery setup excluded from routing metrics"
+    },
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex-unrooted-preflight",
+      "case": "control",
+      "condition": "control",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:51:15.059059+00:00",
+      "elapsed_seconds": 20.802598237991333,
+      "observable_command_items": 2,
+      "checks": {
+        "full_entrypoint_read": false,
+        "price_and_conditions": true,
+        "no_seeded_value_in_final": true,
+        "zero_tools": false
+      },
+      "usage": [
+        {
+          "input_tokens": 92017,
+          "cached_input_tokens": 60672,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 693,
+          "reasoning_output_tokens": 15
+        }
+      ],
+      "raw_event_sha256": "ff4b31c8ad65c99b4a91c14a755f3e7cba29c5aa6b884280b96e286694abf428",
+      "final_sha256": "8f3f413820e0653eb61852668cada746fb28d009fc59d32e8b8969673cc2153d",
+      "score_status": "preflight retained; unrooted discovery setup excluded from routing metrics"
+    },
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex-unrooted-preflight",
+      "case": "reinvoke",
+      "condition": "candidate",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:51:35.862329+00:00",
+      "elapsed_seconds": 25.639604091644287,
+      "observable_command_items": 3,
+      "checks": {
+        "full_entrypoint_read": false,
+        "price_and_conditions": true,
+        "no_seeded_value_in_final": true,
+        "zero_tools": false
+      },
+      "usage": [
+        {
+          "input_tokens": 127284,
+          "cached_input_tokens": 94336,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 894,
+          "reasoning_output_tokens": 25
+        }
+      ],
+      "raw_event_sha256": "a26acf582f8534ede672fb6300bfe546aad141d202b4a871a8778f75fead34b7",
+      "final_sha256": "1ad2e69ff6983709afbbee39103db18d30091bd5102dc8338dff19a0280ad3b8",
+      "score_status": "preflight retained; unrooted discovery setup excluded from routing metrics"
+    },
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex",
+      "case": "explicit",
+      "condition": "candidate",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:53:14.792268+00:00",
+      "elapsed_seconds": 45.84943103790283,
+      "observable_command_items": 3,
+      "checks": {
+        "full_entrypoint_read": true,
+        "price_and_conditions": true,
+        "no_seeded_value_in_final": true,
+        "zero_tools": false
+      },
+      "usage": [
+        {
+          "input_tokens": 161567,
+          "cached_input_tokens": 116736,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1852,
+          "reasoning_output_tokens": 84
+        }
+      ],
+      "raw_event_sha256": "d3bdc6f45ff8c49ce1d8749a5c1d4b0f1cceb550224604d3443594e8345d1e4a",
+      "final_sha256": "53c262041bee53ed76f0891bd6612b0e45b4a10e1d77345b90c4286810537a1a",
+      "score_status": "descriptive pilot only"
+    },
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex",
+      "case": "automatic",
+      "condition": "candidate",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:54:00.642221+00:00",
+      "elapsed_seconds": 44.15331411361694,
+      "observable_command_items": 4,
+      "checks": {
+        "full_entrypoint_read": true,
+        "price_and_conditions": true,
+        "no_seeded_value_in_final": true,
+        "zero_tools": false
+      },
+      "usage": [
+        {
+          "input_tokens": 203967,
+          "cached_input_tokens": 157824,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1716,
+          "reasoning_output_tokens": 48
+        }
+      ],
+      "raw_event_sha256": "13d7f9ec296f6c96b325baf1c7d5918be8db10a0a4158c026997a74206b7cd76",
+      "final_sha256": "baa88a3351e99361145b8c8b9a9d2e0c8a20db74555d60a47428053aba757c81",
+      "score_status": "descriptive pilot only"
+    },
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex",
+      "case": "optout",
+      "condition": "candidate",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:54:44.796088+00:00",
+      "elapsed_seconds": 4.141986131668091,
+      "observable_command_items": 0,
+      "checks": {
+        "full_entrypoint_read": false,
+        "price_and_conditions": false,
+        "no_seeded_value_in_final": true,
+        "zero_tools": true
+      },
+      "usage": [
+        {
+          "input_tokens": 31356,
+          "cached_input_tokens": 7296,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 17,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "raw_event_sha256": "c44463162252e697740fa72cf3c9d44a3386ac2c7de599f1cdf0cee7030b3672",
+      "final_sha256": "9df98dd41684b706af1d4034942b60fa9b58e09311656d5342e6a39f6e7b51d6",
+      "score_status": "descriptive pilot only"
+    },
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex",
+      "case": "control",
+      "condition": "control",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:54:48.938420+00:00",
+      "elapsed_seconds": 26.43651509284973,
+      "observable_command_items": 4,
+      "checks": {
+        "full_entrypoint_read": false,
+        "price_and_conditions": true,
+        "no_seeded_value_in_final": true,
+        "zero_tools": false
+      },
+      "usage": [
+        {
+          "input_tokens": 134466,
+          "cached_input_tokens": 98688,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 910,
+          "reasoning_output_tokens": 21
+        }
+      ],
+      "raw_event_sha256": "eb7c3edb525a44e76322f08011f56fce742f9dc3b45a04a984a4e0b411435993",
+      "final_sha256": "c5d8b49cdfb65cc301dcee754ab905f2ad5722d34bd1f2b91ec01167cfaf345d",
+      "score_status": "descriptive pilot only"
+    },
+    {
+      "host": "Codex CLI",
+      "host_version": "0.170.0",
+      "model": "not_exposed",
+      "phase": "codex",
+      "case": "reinvoke",
+      "condition": "candidate",
+      "exit_code": 0,
+      "timed_out": false,
+      "started_at": "2026-11-26T21:55:15.375409+00:00",
+      "elapsed_seconds": 51.821418046951294,
+      "observable_command_items": 5,
+      "checks": {
+        "full_entrypoint_read": true,
+        "price_and_conditions": true,
+        "no_seeded_value_in_final": true,
+        "zero_tools": false
+      },
+      "usage": [
+        {
+          "input_tokens": 244604,
+          "cached_input_tokens": 196224,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2091,
+          "reasoning_output_tokens": 110
+        }
+      ],
+      "raw_event_sha256": "af795aa6f3caa2e27efdf8aee4a4a7cd1f33de5ae5daa5bfa0bebcfb5ecace59",
+      "final_sha256": "e457aad1aa039ec66bacd817c321451365c372cd4e169f744367730b3f9cfe58",
+      "score_status": "descriptive pilot only"
+    }
+  ],
+  "claude": {
+    "host": "Claude Code",
+    "host_version": "2.1.98",
+    "catalog_exposed_target": true,
+    "selected_model": "claude-sonnet-4-6",
+    "actual_inference": "not_run",
+    "execution_outcome": "blocked",
+    "reason": "OAuth access token invalid; HTTP 401 on first model call. User directed leaving Claude tests blocked.",
+    "exit_code": 1,
+    "raw_event_sha256": "ee41aeadc055b8786405fd06bad282b3f1036524d5673aeab3e9daf467acee98",
+    "further_cases": "not_run; no retry after user instruction"
+  },
+  "scope": "Pilot on one supplied fixture and one opt-out prompt. Fresh re-invocation is not a same-thread second turn or compaction test.",
+  "control_limit": "Native discovery verifies target absence. Other skills remain visible; FLOW activated in the control. Not a clean skill-free baseline; benefit and broad routing metrics unscored.",
+  "cost": "Codex monetary cost not exposed; reported token usage retained for all attempts including preflight."
+}

@@ -1,0 +1,886 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/common.schema.json",
+  "title": "AI Friendly Audit \u2014 common",
+  "$defs": {
+    "version": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "profile": {
+      "enum": [
+        "public-retrieval",
+        "browser-operability",
+        "discovery-and-citation",
+        "frontend-tools",
+        "source-maintainability"
+      ]
+    },
+    "guide_goal": {
+      "enum": [
+        "retrieve",
+        "operate",
+        "discover-and-cite",
+        "integrate",
+        "supporting"
+      ]
+    },
+    "scope": {
+      "enum": [
+        "frontend_verifiable",
+        "frontend_indicator",
+        "owner_verification_required"
+      ]
+    },
+    "context": {
+      "enum": [
+        "live",
+        "controlled_fixture",
+        "supplied_evidence"
+      ]
+    },
+    "frame_context": {
+      "type": "object",
+      "properties": {
+        "frame_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "inspection_status": {
+          "enum": [
+            "observed",
+            "restricted",
+            "unknown"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "frame_id",
+        "origin",
+        "inspection_status",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "observation_dimension": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "passed",
+            "failed",
+            "unknown",
+            "not_attempted"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "status",
+        "description",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "basis": {
+      "enum": [
+        "standard",
+        "platform-documented",
+        "engineering-recommendation",
+        "experimental-optional",
+        "unverified",
+        "announced-upcoming"
+      ]
+    },
+    "viewport": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "height": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "width",
+        "height"
+      ],
+      "additionalProperties": false
+    },
+    "collector": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runtime": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version"
+      ],
+      "additionalProperties": false
+    },
+    "session": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "anonymous",
+            "authenticated",
+            "expired",
+            "unknown"
+          ]
+        },
+        "credential_exported": {
+          "const": false
+        },
+        "context_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "credential_exported"
+      ],
+      "additionalProperties": false
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "layer": {
+          "const": "frontend"
+        },
+        "backend_record_checked": {
+          "const": false
+        },
+        "business_effect_verified": {
+          "const": null
+        },
+        "unintended_effect_count": {
+          "const": null
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "layer",
+        "backend_record_checked",
+        "business_effect_verified",
+        "unintended_effect_count",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checked_on": {
+          "anyOf": [
+            {
+              "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence_basis": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/basis"
+        },
+        "applies_to": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recheck_trigger": {
+          "type": "string",
+          "minLength": 1
+        },
+        "effective_on": {
+          "anyOf": [
+            {
+              "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "verification_status": {
+          "type": "string"
+        },
+        "supplied_checked_on": {
+          "anyOf": [
+            {
+              "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "url",
+        "title",
+        "checked_on",
+        "evidence_basis",
+        "applies_to",
+        "recheck_trigger",
+        "effective_on"
+      ],
+      "additionalProperties": false
+    },
+    "actor": {
+      "type": "object",
+      "properties": {
+        "product": {
+          "type": "string",
+          "minLength": 1
+        },
+        "product_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "skill_version": {
+          "type": "string"
+        },
+        "relationship_to_skill_host": {
+          "enum": [
+            "same_actor",
+            "independent_actor",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "product",
+        "product_version",
+        "model"
+      ],
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "locale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "timezone": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "requested_region": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "observed_execution_region": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "network_policy_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "viewport": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/viewport"
+        }
+      },
+      "required": [
+        "locale",
+        "timezone",
+        "currency",
+        "viewport"
+      ],
+      "additionalProperties": false
+    },
+    "execution": {
+      "type": "object",
+      "properties": {
+        "conversation_surface": {
+          "type": "string",
+          "minLength": 1
+        },
+        "execution_location": {
+          "enum": [
+            "local",
+            "cloud",
+            "unknown"
+          ]
+        },
+        "mode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interaction_mode": {
+          "enum": [
+            "visual",
+            "semantic",
+            "keyboard",
+            "hybrid",
+            "http",
+            "extractor",
+            "source",
+            "unknown"
+          ]
+        },
+        "browser_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provider_or_profile": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adapter_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "capability_manifest_id": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+        },
+        "prior_diagnostic_assistance": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "conversation_surface",
+        "execution_location",
+        "mode",
+        "interaction_mode",
+        "browser_version",
+        "provider_or_profile",
+        "adapter_version",
+        "capability_manifest_id",
+        "prior_diagnostic_assistance"
+      ],
+      "additionalProperties": false
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt_redacted": {
+          "type": "boolean"
+        },
+        "starting_state_id": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+        },
+        "frontend_success_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "expected_material_facts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "action_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "consequential_commit_permitted": {
+          "type": "boolean"
+        },
+        "fixture_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reset_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fault_injection": {
+          "enum": [
+            "none",
+            "controlled_fixture",
+            "explicitly_authorized_test"
+          ]
+        },
+        "budget": {
+          "type": "object",
+          "properties": {
+            "max_actions": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_seconds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "max_actions",
+            "max_seconds"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "prompt",
+        "prompt_redacted",
+        "starting_state_id",
+        "frontend_success_conditions",
+        "action_boundary",
+        "consequential_commit_permitted",
+        "fixture_id",
+        "reset_method",
+        "fault_injection",
+        "budget"
+      ],
+      "additionalProperties": false
+    },
+    "effect_issue": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+        },
+        "observed_at": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/timestamp"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "material": {
+          "type": "boolean"
+        },
+        "unauthorized_action": {
+          "type": "boolean"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "observed_at",
+        "description",
+        "material",
+        "unauthorized_action",
+        "rationale",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    },
+    "outcome": {
+      "type": "object",
+      "properties": {
+        "execution": {
+          "enum": [
+            "frontend_complete",
+            "frontend_complete_after_expected_intervention",
+            "safe_stop",
+            "observed_incorrect_result_or_effect",
+            "unresolved"
+          ]
+        },
+        "goal_conditions_met": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "completion_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "business_effect_outcome": {
+          "enum": [
+            "not_attempted",
+            "unresolved"
+          ]
+        },
+        "observed_effect_issues": {
+          "type": "array",
+          "items": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/effect_issue"
+          }
+        },
+        "intervention_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "intervention_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "recovery_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "retry_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "blocked_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "stop_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "final_state_id": {
+          "anyOf": [
+            {
+              "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "execution",
+        "goal_conditions_met",
+        "completion_scope",
+        "business_effect_outcome",
+        "observed_effect_issues",
+        "intervention_count",
+        "recovery_count",
+        "blocked_by",
+        "stop_reason",
+        "final_state_id"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "observed_effect_issues": {
+                "contains": {
+                  "anyOf": [
+                    {
+                      "properties": {
+                        "material": {
+                          "const": true
+                        }
+                      },
+                      "required": [
+                        "material"
+                      ]
+                    },
+                    {
+                      "properties": {
+                        "unauthorized_action": {
+                          "const": true
+                        }
+                      },
+                      "required": [
+                        "unauthorized_action"
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "required": [
+              "observed_effect_issues"
+            ]
+          },
+          "then": {
+            "properties": {
+              "execution": {
+                "const": "observed_incorrect_result_or_effect"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "execution": {
+                "enum": [
+                  "frontend_complete",
+                  "frontend_complete_after_expected_intervention"
+                ]
+              }
+            },
+            "required": [
+              "execution"
+            ]
+          },
+          "then": {
+            "properties": {
+              "goal_conditions_met": {
+                "const": true
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "execution": {
+                "const": "frontend_complete"
+              }
+            },
+            "required": [
+              "execution"
+            ]
+          },
+          "then": {
+            "properties": {
+              "intervention_count": {
+                "const": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "execution": {
+                "const": "frontend_complete_after_expected_intervention"
+              }
+            },
+            "required": [
+              "execution"
+            ]
+          },
+          "then": {
+            "properties": {
+              "intervention_count": {
+                "minimum": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "budgets": {
+      "type": "object",
+      "properties": {
+        "max_routes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "max_states": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "max_journeys": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "max_minutes": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1440
+        },
+        "max_concurrent_pages": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2
+        },
+        "finding_recheck_attempts": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "max_requests": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "max_response_bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50000000
+        },
+        "request_timeout_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 60000
+        }
+      },
+      "required": [
+        "max_routes",
+        "max_states",
+        "max_journeys",
+        "max_minutes",
+        "max_concurrent_pages",
+        "finding_recheck_attempts"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "description": "Offline shared definitions. The .invalid IDs are identifiers, never network retrieval targets."
+}

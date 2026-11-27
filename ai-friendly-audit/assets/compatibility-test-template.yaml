@@ -1,0 +1,103 @@
+# Structural example only; no real trial or successful outcome is claimed.
+# Replace example identities, times, context, task, and references from an actual trial.
+# Add matching journey/state/capability/evidence records to the canonical audit.
+# Validate against compatibility-test.schema.json after converting YAML to JSON.
+schema_version: "1.0.0"
+test_id: "test-example"
+journey_id: "journey-example"
+trial_number: 1
+started_at: "2026-11-22T18:00:00Z"
+completed_at: "2026-11-22T18:00:01Z"
+guide_revision: "2.0"
+guide_sections: ["2.1", "6.3", "10", "11.4"]
+guide_goal: "operate"
+profile: "browser-operability"
+test_context: "controlled_fixture"
+skill_host:
+  product: "example-runtime"
+  product_version: "not_exposed"
+  model: "not_exposed"
+  skill_version: "1.0.0"
+tested_agent:
+  product: "example-runtime"
+  product_version: "not_exposed"
+  model: "not_exposed"
+  relationship_to_skill_host: "same_actor"
+execution:
+  conversation_surface: "cli"
+  execution_location: "unknown"
+  mode: "example-browser-mode"
+  interaction_mode: "hybrid"
+  browser_version: "not_exposed"
+  provider_or_profile: "example-isolated-fixture"
+  adapter_version: "not_exposed"
+  capability_manifest_id: "capabilities-example"
+  prior_diagnostic_assistance: false
+session:
+  status: "anonymous"
+  credential_exported: false
+  notes: "Illustrative fixture context; no real session was inspected."
+environment:
+  locale: null
+  timezone: null
+  currency: null
+  requested_region: null
+  observed_execution_region: null
+  network_policy_id: null
+  viewport:
+    width: 1280
+    height: 800
+task:
+  prompt: "Find the consultation price and reach review; stop before booking."
+  prompt_redacted: false
+  starting_state_id: "state-example-start"
+  frontend_success_conditions:
+    - "Review identifies the selected service, date, timezone, amount, and currency."
+    - "The recorded action trace contains no booking-submit action."
+  expected_material_facts:
+    - "Service identity, selected date/timezone, amount, and currency from the actual fixture."
+  action_boundary: "stop_before_booking"
+  consequential_commit_permitted: false
+  fixture_id: "example-fake-data-fixture"
+  reset_method: "document_actual_fixture_reset"
+  fault_injection: "none"
+  budget:
+    max_actions: 30
+    max_seconds: 120
+observations:
+  access:
+    status: "not_attempted"
+    description: "Template only; access has not been tested."
+    evidence_ids: []
+  comprehension:
+    status: "not_attempted"
+    description: "Template only; material facts have not been evaluated."
+    evidence_ids: []
+  execution:
+    status: "not_attempted"
+    description: "Template only; the declared review-stage task has not run."
+    evidence_ids: []
+  correctness:
+    status: "not_attempted"
+    description: "Frontend-only correctness observation has not been performed; authoritative business effects remain unverified."
+    evidence_ids: []
+verification:
+  layer: "frontend"
+  backend_record_checked: false
+  business_effect_verified: null
+  unintended_effect_count: null
+  evidence_ids: []
+outcome:
+  execution: "unresolved"
+  goal_conditions_met: null
+  completion_scope: "review_step"
+  business_effect_outcome: "not_attempted"
+  observed_effect_issues: []
+  intervention_count: 0
+  intervention_types: []
+  recovery_count: 0
+  retry_count: 0
+  blocked_by: "template_only"
+  stop_reason: "This structural example has not been executed."
+  final_state_id: null
+documented_support: []

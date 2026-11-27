@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/journey.schema.json",
+  "title": "AI Friendly Audit \u2014 journey",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/version"
+    },
+    "id": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+    },
+    "trial_number": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "started_at": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/timestamp"
+    },
+    "completed_at": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/timestamp"
+    },
+    "guide_revision": {
+      "const": "2.0"
+    },
+    "guide_sections": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "guide_goal": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/guide_goal"
+    },
+    "profile": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/profile"
+    },
+    "test_context": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/context"
+    },
+    "skill_host": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/actor"
+    },
+    "tested_agent": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/actor"
+    },
+    "execution": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/execution"
+    },
+    "session": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/session"
+    },
+    "environment": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/environment"
+    },
+    "task": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/task"
+    },
+    "verification": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/verification"
+    },
+    "outcome": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/outcome"
+    },
+    "observations": {
+      "type": "object",
+      "properties": {
+        "access": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/observation_dimension"
+        },
+        "comprehension": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/observation_dimension"
+        },
+        "execution": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/observation_dimension"
+        },
+        "correctness": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/observation_dimension"
+        }
+      },
+      "required": [
+        "access",
+        "comprehension",
+        "execution",
+        "correctness"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "trial_number",
+    "started_at",
+    "completed_at",
+    "guide_revision",
+    "guide_sections",
+    "guide_goal",
+    "profile",
+    "test_context",
+    "skill_host",
+    "tested_agent",
+    "execution",
+    "session",
+    "environment",
+    "task",
+    "verification",
+    "outcome",
+    "observations"
+  ],
+  "additionalProperties": false
+}

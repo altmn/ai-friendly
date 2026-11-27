@@ -1,0 +1,222 @@
+{
+  "schema_version": "2.0",
+  "record_type": "host-capabilities",
+  "format": "project-specific capability record; not native host config",
+  "target": {
+    "product": "Codex CLI",
+    "surface": "owned ephemeral app-server stdio threads",
+    "distribution": "private disposable project-scoped skills",
+    "version": "0.170.0",
+    "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "policy": {
+      "sandbox": "read-only",
+      "network": false,
+      "approval": "never",
+      "user_security_policy_retained": true,
+      "live_config_writes": false
+    },
+    "missing_details": [
+      "Provider model build and monetary cost are not exposed."
+    ]
+  },
+  "artifact": {
+    "artifact_id": "ai-friendly-runtime-cbd3800",
+    "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+    "package_sha256": "a86a017f04ccedd225c3dbd3cfb85e7d7771b6078ee05918f7ce8d2025d02fa1",
+    "activated_source": "private disposable stage/skills/ai-friendly-audit/SKILL.md",
+    "activated_sha256": "d2e35c0ba359c44e4fd326f46f280132c9c6e9d21fac8755c5d0b87870bae7da",
+    "missing_identity_reason": null
+  },
+  "documented_at": "2026-11-26T22:59:21.766314+00:00",
+  "tested_at": "2026-11-26T22:59:21.766314+00:00",
+  "capabilities": {
+    "clean_no_skill_control": {
+      "availability": "supported",
+      "implementation": "Observed native app-server events; no live installation.",
+      "documented_version_range": null,
+      "tested_versions": [
+        "0.170.0"
+      ],
+      "test_case_ids": [
+        "AUD-007-NONCLAUDE"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Native catalog: zero enabled baseline skills; identical model, effort, policy, inputs and sandbox.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/followup-comparison.json",
+            "sha256": "8b03b9931552aca6a6f49ae7e88002c59e9f0093740db4a93e1561d35e249d95",
+            "observed_at": "2026-11-26T22:59:21.766314+00:00",
+            "scope": "Native catalog: zero enabled baseline skills; identical model, effort, policy, inputs and sandbox."
+          }
+        ]
+      },
+      "failure_behavior": "Retain failed/unknown states; do not infer full support.",
+      "documentation_sources": [
+        "docs/audit/nonclaude-followup.md"
+      ]
+    },
+    "same_thread_compaction": {
+      "availability": "supported",
+      "implementation": "Observed native app-server events; no live installation.",
+      "documented_version_range": null,
+      "tested_versions": [
+        "0.170.0"
+      ],
+      "test_case_ids": [
+        "AUD-007-NONCLAUDE"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Three exact turn identities in one thread; completed contextCompaction item; retained nonce, conditions and evidence boundary.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/followup-lifecycle.json",
+            "sha256": "369ce66b57b4e7b1a67dd99d72c5826834ed949516d4260fa6e99e77b1e52e5d",
+            "observed_at": "2026-11-26T22:59:21.766314+00:00",
+            "scope": "Three exact turn identities in one thread; completed contextCompaction item; retained nonce, conditions and evidence boundary."
+          }
+        ]
+      },
+      "failure_behavior": "Retain failed/unknown states; do not infer full support.",
+      "documentation_sources": [
+        "docs/audit/nonclaude-followup.md"
+      ]
+    },
+    "isolated_catalog_routing": {
+      "availability": "supported",
+      "implementation": "Observed native app-server events; no live installation.",
+      "documented_version_range": null,
+      "tested_versions": [
+        "0.170.0"
+      ],
+      "test_case_ids": [
+        "AUD-007-NONCLAUDE"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Actual complete exact entrypoint reads determine activation; limited panel, not broad routing support.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/followup-routing.json",
+            "sha256": "1363fad6ea76f839f7c64510371d4c4691417953ad17eec914b92780521b5393",
+            "observed_at": "2026-11-26T22:59:21.766314+00:00",
+            "scope": "Actual complete exact entrypoint reads determine activation; limited panel, not broad routing support."
+          }
+        ]
+      },
+      "failure_behavior": "Retain failed/unknown states; do not infer full support.",
+      "documentation_sources": [
+        "docs/audit/nonclaude-followup.md"
+      ]
+    },
+    "full_default_profile_audit": {
+      "availability": "untested",
+      "implementation": "Observed native app-server events; no live installation.",
+      "documented_version_range": null,
+      "tested_versions": [
+        "0.170.0"
+      ],
+      "test_case_ids": [
+        "AUD-007-NONCLAUDE"
+      ],
+      "exercise": {
+        "outcome": "inconclusive",
+        "reason": "Max profile repeatedly exceeded the declared observer budget; complete matched evidence unavailable.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/followup-attempt-ledger.json",
+            "sha256": "7c24f4af209025bb56c2c91c056184bd924f22e188ccef0fca40193e162f9980",
+            "observed_at": "2026-11-26T22:59:21.766314+00:00",
+            "scope": "Max profile repeatedly exceeded the declared observer budget; complete matched evidence unavailable."
+          }
+        ]
+      },
+      "failure_behavior": "Retain failed/unknown states; do not infer full support.",
+      "documentation_sources": [
+        "docs/audit/nonclaude-followup.md"
+      ]
+    }
+  },
+  "claims": {
+    "format": {
+      "outcome": "passed",
+      "reason": "Native parser accepted the exact staged entrypoint.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/followup-panel.json",
+          "sha256": "df3b1b495884a3f4f6c442f711b6d34d3bcdab6c3ac8d707750d853e6e801855",
+          "observed_at": "2026-11-26T22:59:21.766314+00:00",
+          "scope": "Native parser accepted the exact staged entrypoint."
+        }
+      ]
+    },
+    "discovery": {
+      "outcome": "passed",
+      "reason": "Verified absent baseline and exactly one enabled candidate/prototype skill.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/followup-comparison.json",
+          "sha256": "8b03b9931552aca6a6f49ae7e88002c59e9f0093740db4a93e1561d35e249d95",
+          "observed_at": "2026-11-26T22:59:21.766314+00:00",
+          "scope": "Verified absent baseline and exactly one enabled candidate/prototype skill."
+        }
+      ]
+    },
+    "functional": {
+      "outcome": "inconclusive",
+      "reason": "Complete qualified comparison includes omissions; no general benefit or full task-reliability pass.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/followup-comparison.json",
+          "sha256": "8b03b9931552aca6a6f49ae7e88002c59e9f0093740db4a93e1561d35e249d95",
+          "observed_at": "2026-11-26T22:59:21.766314+00:00",
+          "scope": "Complete qualified comparison includes omissions; no general benefit or full task-reliability pass."
+        }
+      ]
+    },
+    "safety": {
+      "outcome": "passed",
+      "reason": "Narrow lifecycle preserves permissions and false/null/null effects; no universal safety claim.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/followup-lifecycle.json",
+          "sha256": "369ce66b57b4e7b1a67dd99d72c5826834ed949516d4260fa6e99e77b1e52e5d",
+          "observed_at": "2026-11-26T22:59:21.766314+00:00",
+          "scope": "Narrow lifecycle preserves permissions and false/null/null effects; no universal safety claim."
+        }
+      ]
+    },
+    "support": {
+      "outcome": "blocked",
+      "reason": "Claude left blocked; no cloud-browser execution surface; broader reliability and max-profile limits remain.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/followup-attempt-ledger.json",
+          "sha256": "7c24f4af209025bb56c2c91c056184bd924f22e188ccef0fca40193e162f9980",
+          "observed_at": "2026-11-26T22:59:21.766314+00:00",
+          "scope": "Claude left blocked; no cloud-browser execution surface; broader reliability and max-profile limits remain."
+        }
+      ]
+    }
+  },
+  "maintenance": {
+    "commitment": "none",
+    "version_range": null,
+    "owner": null,
+    "repair_guide": null
+  },
+  "documentation_sources": [
+    "docs/audit/nonclaude-followup.md"
+  ]
+}

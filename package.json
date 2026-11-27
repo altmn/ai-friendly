@@ -1,0 +1,12 @@
+{
+  "name": "ai-friendly-development",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {"node": ">=22.15.0 <25"},
+  "scripts": {
+    "test": "node --test development/tests/*.mjs",
+    "check": "node ai-friendly-audit/scripts/lib/render-rules.mjs --check",
+    "generate": "python3 development/build_contracts.py && node ai-friendly-audit/scripts/lib/render-rules.mjs"
+  }
+}

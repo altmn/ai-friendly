@@ -1,0 +1,20 @@
+{
+  "scope": "Artifact preparation failures and corrections; separate from native subject outcomes.",
+  "date": "2026-11-26",
+  "attempts": [
+    {
+      "check": "First browser normalization",
+      "outcome": "failed",
+      "observed": "Invalid URL: input undefined. Tool-text JSON parsing had included a trailing navigation annotation.",
+      "correction": "Decode the original JSON prefix and remove headers/synthetic sensitive values before normalization.",
+      "final_outcome": "passed; canonical browser report and bundle independently validate"
+    },
+    {
+      "check": "First version-2 receipt schema check",
+      "outcome": "failed",
+      "observed": "Four passed native attempt records had empty checks arrays, violating the original schema minItems requirement.",
+      "correction": "Populate actual per-attempt entrypoint, qualifier, opt-out and final-output predicates from retained native events.",
+      "final_outcome": "passed; all three host records, receipt and 57 evidence hash references validate"
+    }
+  ]
+}

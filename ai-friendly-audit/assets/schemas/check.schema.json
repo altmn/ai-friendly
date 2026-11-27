@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/check.schema.json",
+  "title": "AI Friendly Audit \u2014 check",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+    },
+    "rule_id": {
+      "type": "string",
+      "pattern": "^AFF-[A-Z]+-[0-9]{3}$"
+    },
+    "rule_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state_id": {
+      "anyOf": [
+        {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "profile": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/profile"
+    },
+    "outcome": {
+      "enum": [
+        "passed",
+        "failed",
+        "cantTell",
+        "inapplicable",
+        "untested"
+      ]
+    },
+    "reason_code": {
+      "anyOf": [
+        {
+          "enum": [
+            "tool_unavailable",
+            "auth_unavailable",
+            "source_unavailable",
+            "cross_origin_restriction",
+            "unsafe_action_required",
+            "budget_exhausted",
+            "environment_failure",
+            "site_access_barrier",
+            "representation_unavailable",
+            "inconclusive_observation",
+            "not_applicable",
+            "not_planned",
+            "owner_intent_unknown",
+            "collection_incomplete",
+            "schema_invalid"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expected": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "evidence_scope": {
+      "enum": [
+        "frontend_verifiable",
+        "frontend_indicator"
+      ]
+    },
+    "test_context": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/context"
+    },
+    "evidence_variant": {
+      "type": "string",
+      "minLength": 1
+    },
+    "adaptation": {
+      "type": "object",
+      "properties": {
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "adequacy_reviewed": {
+          "const": true
+        }
+      },
+      "required": [
+        "scope",
+        "limitations",
+        "adequacy_reviewed"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "id",
+    "rule_id",
+    "rule_version",
+    "state_id",
+    "profile",
+    "outcome",
+    "reason_code",
+    "reason",
+    "target",
+    "expected",
+    "observed",
+    "evidence_ids",
+    "evidence_scope",
+    "test_context"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "enum": [
+              "passed",
+              "failed"
+            ]
+          }
+        },
+        "required": [
+          "outcome"
+        ]
+      },
+      "then": {
+        "properties": {
+          "evidence_ids": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "enum": [
+              "untested",
+              "cantTell",
+              "inapplicable"
+            ]
+          }
+        },
+        "required": [
+          "outcome"
+        ]
+      },
+      "then": {
+        "properties": {
+          "reason_code": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

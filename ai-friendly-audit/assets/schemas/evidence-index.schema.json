@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/evidence-index.schema.json",
+  "title": "AI Friendly Audit \u2014 evidence-index",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/version"
+    },
+    "run_id": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/evidence.schema.json"
+      }
+    },
+    "retention_notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "evidence",
+    "retention_notes"
+  ],
+  "additionalProperties": false
+}

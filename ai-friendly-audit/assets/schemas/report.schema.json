@@ -1,0 +1,720 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/report.schema.json",
+  "title": "AI Friendly Audit \u2014 report",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/version"
+    },
+    "run": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+        },
+        "started_at": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/timestamp"
+        },
+        "completed_at": {
+          "anyOf": [
+            {
+              "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/timestamp"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "initialized",
+            "completed",
+            "partial",
+            "failed",
+            "cancelled"
+          ]
+        },
+        "mode": {
+          "enum": [
+            "full-browser",
+            "limited-browser",
+            "computer-use",
+            "http",
+            "supplied-evidence",
+            "no-access"
+          ]
+        },
+        "test_context": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/context"
+        },
+        "collector": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/collector"
+        },
+        "target_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "action_envelope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "imported_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "started_at",
+        "completed_at",
+        "status",
+        "mode",
+        "test_context",
+        "collector",
+        "target_url",
+        "action_envelope"
+      ],
+      "additionalProperties": false
+    },
+    "module": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "const": "ai-friendly-audit-frontend"
+        },
+        "version": {
+          "const": "1.0.0"
+        },
+        "rule_catalog_version": {
+          "const": "1.0.0"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "rule_catalog_version"
+      ],
+      "additionalProperties": false
+    },
+    "guide": {
+      "type": "object",
+      "properties": {
+        "revision": {
+          "const": "2.0"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checklist_version": {
+          "const": "1.0.0"
+        }
+      },
+      "required": [
+        "revision",
+        "source",
+        "checklist_version"
+      ],
+      "additionalProperties": false
+    },
+    "goals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/profile"
+          },
+          "guide_goal": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/guide_goal"
+          },
+          "selected": {
+            "type": "boolean"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "profile",
+          "guide_goal",
+          "selected",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "allowed_origins": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "excluded_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "planned_routes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "planned_states": {
+          "type": "array",
+          "items": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+          },
+          "uniqueItems": true
+        },
+        "priority_tasks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "session": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/session"
+        },
+        "viewport": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/viewport"
+        },
+        "intended_locale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "intended_timezone": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "intended_currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effective_locale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effective_timezone": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effective_currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "content_use_intent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "budgets": {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/budgets"
+        }
+      },
+      "required": [
+        "allowed_origins",
+        "excluded_paths",
+        "planned_routes",
+        "planned_states",
+        "priority_tasks",
+        "session",
+        "viewport",
+        "intended_locale",
+        "intended_timezone",
+        "intended_currency",
+        "effective_locale",
+        "effective_timezone",
+        "effective_currency",
+        "content_use_intent",
+        "budgets"
+      ],
+      "additionalProperties": false
+    },
+    "capabilities": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/capability.schema.json"
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "origin": {
+            "type": "string",
+            "minLength": 1
+          },
+          "captured_at": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/timestamp"
+          },
+          "session_scope": {
+            "enum": [
+              "observed_anonymously",
+              "reachable_while_authenticated",
+              "unknown"
+            ]
+          },
+          "viewport": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/viewport"
+          },
+          "representation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "baseline": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "origin",
+          "captured_at",
+          "session_scope",
+          "viewport",
+          "representation",
+          "baseline",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/evidence.schema.json"
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/check.schema.json"
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/finding.schema.json"
+      }
+    },
+    "journeys": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/journey.schema.json"
+      }
+    },
+    "representation_comparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+          },
+          "fact_id": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+          },
+          "profile": {
+            "const": "public-retrieval"
+          },
+          "material_qualifiers": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "availability": {
+            "enum": [
+              "available",
+              "unavailable",
+              "partial",
+              "unknown"
+            ]
+          },
+          "mismatch_type": {
+            "enum": [
+              "none_observed",
+              "omitted_fact",
+              "omitted_qualifier",
+              "value_mismatch",
+              "table_relationship_loss",
+              "link_loss",
+              "truncated",
+              "locale_mismatch",
+              "stale_representation",
+              "unknown"
+            ]
+          },
+          "observations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "state_id": {
+                  "anyOf": [
+                    {
+                      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "representation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "observed_value": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "captured_at": {
+                  "anyOf": [
+                    {
+                      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/timestamp"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "state_id",
+                "representation",
+                "observed_value",
+                "captured_at",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+            },
+            "uniqueItems": true
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "fact_id",
+          "profile",
+          "material_qualifiers",
+          "availability",
+          "mismatch_type",
+          "observations",
+          "evidence_ids",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "compatibility_tests": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/compatibility-test.schema.json"
+      }
+    },
+    "owner_verification": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/owner-verification.schema.json"
+      }
+    },
+    "guide_coverage": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/guide-coverage.schema.json"
+      },
+      "minItems": 26,
+      "maxItems": 26
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "planned_check_instances": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "executed_check_instances": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "check_outcomes": {
+          "type": "object",
+          "properties": {
+            "passed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "failed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "cantTell": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "inapplicable": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "untested": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "passed",
+            "failed",
+            "cantTell",
+            "inapplicable",
+            "untested"
+          ],
+          "additionalProperties": false
+        },
+        "planned_state_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_state_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "guide_requirement_count": {
+          "const": 26
+        },
+        "applicable_guide_requirements": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 26
+        },
+        "frontend_assessed_guide_requirements": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 26
+        },
+        "owner_verification_required_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "successful_trials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_trials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "material_error_trials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unresolved_trials": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "planned_check_instances",
+        "executed_check_instances",
+        "check_outcomes",
+        "planned_state_count",
+        "observed_state_count",
+        "guide_requirement_count",
+        "applicable_guide_requirements",
+        "frontend_assessed_guide_requirements",
+        "owner_verification_required_count",
+        "successful_trials",
+        "total_trials",
+        "material_error_trials",
+        "unresolved_trials"
+      ],
+      "additionalProperties": false
+    },
+    "verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/profile"
+          },
+          "verdict": {
+            "enum": [
+              "demonstrated_for_tested_scope",
+              "usable_with_friction",
+              "blocked_for_identified_tasks",
+              "observed_material_error",
+              "inconclusive",
+              "not_assessed",
+              "signals_observed",
+              "declarations_inspected",
+              "unsupported",
+              "inapplicable"
+            ]
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+            },
+            "uniqueItems": true
+          },
+          "journey_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+            },
+            "uniqueItems": true
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "profile",
+          "verdict",
+          "summary",
+          "evidence_ids",
+          "journey_ids",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "run",
+    "module",
+    "guide",
+    "goals",
+    "scope",
+    "capabilities",
+    "states",
+    "evidence",
+    "checks",
+    "findings",
+    "journeys",
+    "representation_comparisons",
+    "compatibility_tests",
+    "owner_verification",
+    "guide_coverage",
+    "coverage",
+    "verdicts",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

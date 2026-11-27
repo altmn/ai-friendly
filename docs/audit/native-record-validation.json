@@ -1,0 +1,31 @@
+{
+  "engine": "AJV 8.17.1; original unmodified v2 record schemas; local registry, no remote retrieval",
+  "results": [
+    {
+      "file": "native-codex-host.json",
+      "valid": true,
+      "errors": null
+    },
+    {
+      "file": "native-browser-host.json",
+      "valid": true,
+      "errors": null
+    },
+    {
+      "file": "native-claude-host.json",
+      "valid": true,
+      "errors": null
+    },
+    {
+      "file": "native-evaluation-receipt.json",
+      "valid": true,
+      "errors": null
+    },
+    {
+      "check": "local evidence hashes",
+      "valid": true,
+      "references": 57,
+      "errors": []
+    }
+  ]
+}

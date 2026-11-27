@@ -1,0 +1,91 @@
+{
+  "recorded_at": "2026-11-26T23:37:57.482252+00:00",
+  "branch": "codex/aud-007-field-names-max-budget",
+  "committed": false,
+  "resource_tests": {
+    "passed": 88,
+    "failed": 0,
+    "skipped": 0,
+    "node": "24.22.3",
+    "elapsed_seconds": 6.31710975,
+    "exit_code": 0
+  },
+  "offline_harness_tests": {
+    "passed": 13,
+    "failed": 0,
+    "exit_code": 0
+  },
+  "before_fix": {
+    "source_view_selection_first_eight": {
+      "failed": 6,
+      "passed_incidentally": 2
+    },
+    "deadline_new_four": {
+      "failures": 3,
+      "errors": 1
+    },
+    "historical_native_name_omissions": 5
+  },
+  "native": {
+    "scheduled": 24,
+    "attempted": 24,
+    "retries": 0,
+    "model": "gpt-6.1-sol",
+    "effort": "max",
+    "turn_limit_seconds": 180,
+    "summary": {
+      "candidate": {
+        "passed": 12
+      },
+      "previous": {
+        "inconclusive": 3,
+        "passed": 3
+      },
+      "baseline": {
+        "passed": 6
+      }
+    },
+    "candidate_elapsed_range_seconds": [
+      49.56383991241455,
+      76.78928709030151
+    ]
+  },
+  "input_and_runtime_identity": "Final 45-file runtime and all input hashes match frozen stages; verified by summarizer.",
+  "generator_check": {
+    "rules": 71,
+    "schemas": 13,
+    "synchronized": true
+  },
+  "packages": [
+    {
+      "filename": "ai-friendly-audit-development-and-verification-1.0.0.zip",
+      "sha256": "58e5699c04cb8e2d6a541668685e585ff8726809a40a0eb27b3eb4429531c3d0",
+      "repeat_sha256": "58e5699c04cb8e2d6a541668685e585ff8726809a40a0eb27b3eb4429531c3d0",
+      "entries": 52,
+      "crc_valid": true
+    },
+    {
+      "filename": "ai-friendly-audit-canonical-package-1.0.0.zip",
+      "sha256": "e0d4409766c330976ce37a8ab5a55b1fc3c0b6fb526daecdb6f3ad931bf0c17c",
+      "repeat_sha256": "e0d4409766c330976ce37a8ab5a55b1fc3c0b6fb526daecdb6f3ad931bf0c17c",
+      "entries": 45,
+      "crc_valid": true
+    }
+  ],
+  "record_validation": "Original v2 schemas; both new host/evaluation records and 262 artifact references valid.",
+  "cleanup": {
+    "all_owned_servers_exited": true,
+    "owned_workspace_open_handles": 0,
+    "browser_or_fixture_server_created": false,
+    "live_install_or_config_changed": false
+  },
+  "independent_review": "Audit reviewer compared all 12 candidate fact arrays against fixtures and inspected all candidate command strings; only scoped reads and reviewed read-only helpers were observed. Not blinded grading.",
+  "claude": "blocked by user direction; zero calls",
+  "remaining": [
+    "Cloud browser and new live-browser tests unavailable/unrun.",
+    "Full live/canonical max-profile audits, broad held-out and full-catalog routing remain unqualified.",
+    "Earlier lifecycle/browser passes remain historical; native compaction not rerun for changed candidate.",
+    "No incremental benefit over new 6/6 no-skill control; no causal timing/cost claim."
+  ],
+  "whitespace_check": "git diff --check passed; no native or resource reruns hidden."
+}

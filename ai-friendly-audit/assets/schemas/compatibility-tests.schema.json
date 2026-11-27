@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/compatibility-tests.schema.json",
+  "title": "AI Friendly Audit \u2014 compatibility-tests",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/version"
+    },
+    "run_id": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+    },
+    "compatibility_tests": {
+      "type": "array",
+      "items": {
+        "$ref": "https://ai-friendly-audit.invalid/schemas/compatibility-test.schema.json"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "compatibility_tests"
+  ],
+  "additionalProperties": false
+}

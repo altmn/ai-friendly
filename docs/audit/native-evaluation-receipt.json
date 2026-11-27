@@ -1,0 +1,1315 @@
+{
+  "schema_version": "2.0",
+  "record_type": "evaluation-receipt",
+  "case_id": "AUD-007-NATIVE-PILOT",
+  "recorded_at": "2026-11-26T22:10:52.501179+00:00",
+  "artifact": {
+    "artifact_id": "ai-friendly-runtime-cbd3800",
+    "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+    "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+    "activated_source": "disposable project/.agents/skills/ai-friendly-audit/SKILL.md",
+    "activated_sha256": "d2e35c0ba359c44e4fd326f46f280132c9c6e9d21fac8755c5d0b87870bae7da",
+    "missing_identity_reason": null
+  },
+  "panel": {
+    "id": "AUD-007-NATIVE-PILOT",
+    "sha256": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+    "acceptance_frozen_at": "2026-11-26T21:49:05.200535+00:00",
+    "retry_policy": "No hidden retries. Five unrooted Codex preflight attempts retained, followed by an amended rooted-discovery panel. Claude stopped after its first auth failure.",
+    "exclusion_policy": "Preflight setup failures excluded from routing metrics; all attempts retained. No quantitative benefit/reliability score.",
+    "control_identity": {
+      "kind": "no_skill",
+      "artifact": null,
+      "isolation": "Target absent verified through native skills/list; other global skills remain, and FLOW activated.",
+      "reason": "Target-absent control only; clean skill-free comparison remains unverified."
+    }
+  },
+  "budget": {
+    "max_attempts": 12,
+    "max_elapsed_seconds": null,
+    "max_cost": null,
+    "currency": "USD",
+    "enforcement": "Native child processes limited to 180 seconds each with owned process-group termination. Browser routes/states/tab budget frozen in panel; no paid API key supplied."
+  },
+  "runtime_versions": {
+    "codex": "0.170.0",
+    "claude": "2.1.98",
+    "browse": "0.1.5",
+    "chrome": "157",
+    "node_resource": "24.22.3"
+  },
+  "attempts": [
+    {
+      "attempt_id": "codex-unrooted-preflight-explicit",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "candidate",
+      "started_at": "2026-11-26T21:49:44.325526+00:00",
+      "ended_at": "2026-11-26T21:50:46.746551+00:00",
+      "artifact": {
+        "artifact_id": "ai-friendly-runtime-cbd3800",
+        "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+        "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+        "activated_source": "disposable project/.agents/skills/ai-friendly-audit/SKILL.md",
+        "activated_sha256": "d2e35c0ba359c44e4fd326f46f280132c9c6e9d21fac8755c5d0b87870bae7da",
+        "missing_identity_reason": null
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "inconclusive",
+      "checks": [],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex-unrooted-preflight/explicit retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 62.4210250377655,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 308119,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 2510,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 7,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "codex-unrooted-preflight-automatic",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "candidate",
+      "started_at": "2026-11-26T21:50:46.747239+00:00",
+      "ended_at": "2026-11-26T21:51:09.984017+00:00",
+      "artifact": {
+        "artifact_id": "ai-friendly-runtime-cbd3800",
+        "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+        "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+        "activated_source": null,
+        "activated_sha256": null,
+        "missing_identity_reason": "No target activation observed in this case; opt-out or unrooted preflight."
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "inconclusive",
+      "checks": [],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex-unrooted-preflight/automatic retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 23.236778020858765,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 92191,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 791,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 2,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "codex-unrooted-preflight-optout",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "candidate",
+      "started_at": "2026-11-26T21:51:09.984437+00:00",
+      "ended_at": "2026-11-26T21:51:15.058504+00:00",
+      "artifact": {
+        "artifact_id": "ai-friendly-runtime-cbd3800",
+        "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+        "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+        "activated_source": null,
+        "activated_sha256": null,
+        "missing_identity_reason": "No target activation observed in this case; opt-out or unrooted preflight."
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "inconclusive",
+      "checks": [],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex-unrooted-preflight/optout retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 5.074066877365112,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 30317,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 17,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 0,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "codex-unrooted-preflight-control",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "no_skill",
+      "started_at": "2026-11-26T21:51:15.059059+00:00",
+      "ended_at": "2026-11-26T21:51:35.861657+00:00",
+      "artifact": {
+        "artifact_id": "target-absent-control",
+        "source_commit": null,
+        "package_sha256": null,
+        "activated_source": null,
+        "activated_sha256": null,
+        "missing_identity_reason": "Target absent; complete global host-context identity was not established."
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "inconclusive",
+      "checks": [],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex-unrooted-preflight/control retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 20.802598237991333,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 92017,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 693,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 2,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "codex-unrooted-preflight-reinvoke",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "candidate",
+      "started_at": "2026-11-26T21:51:35.862329+00:00",
+      "ended_at": "2026-11-26T21:52:01.501933+00:00",
+      "artifact": {
+        "artifact_id": "ai-friendly-runtime-cbd3800",
+        "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+        "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+        "activated_source": null,
+        "activated_sha256": null,
+        "missing_identity_reason": "No target activation observed in this case; opt-out or unrooted preflight."
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "inconclusive",
+      "checks": [],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex-unrooted-preflight/reinvoke retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 25.639604091644287,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 127284,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 894,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 3,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "codex-explicit",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "candidate",
+      "started_at": "2026-11-26T21:53:14.792268+00:00",
+      "ended_at": "2026-11-26T21:54:00.641699+00:00",
+      "artifact": {
+        "artifact_id": "ai-friendly-runtime-cbd3800",
+        "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+        "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+        "activated_source": "disposable project/.agents/skills/ai-friendly-audit/SKILL.md",
+        "activated_sha256": "d2e35c0ba359c44e4fd326f46f280132c9c6e9d21fac8755c5d0b87870bae7da",
+        "missing_identity_reason": null
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "full_entrypoint_read",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/explicit/full_entrypoint_read"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        },
+        {
+          "id": "price_and_conditions",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/explicit/price_and_conditions"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        },
+        {
+          "id": "no_seeded_value_in_final",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/explicit/no_seeded_value_in_final"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex/explicit retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 45.84943103790283,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 161567,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 1852,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 3,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "codex-automatic",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "candidate",
+      "started_at": "2026-11-26T21:54:00.642221+00:00",
+      "ended_at": "2026-11-26T21:54:44.795535+00:00",
+      "artifact": {
+        "artifact_id": "ai-friendly-runtime-cbd3800",
+        "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+        "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+        "activated_source": "disposable project/.agents/skills/ai-friendly-audit/SKILL.md",
+        "activated_sha256": "d2e35c0ba359c44e4fd326f46f280132c9c6e9d21fac8755c5d0b87870bae7da",
+        "missing_identity_reason": null
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "full_entrypoint_read",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/automatic/full_entrypoint_read"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        },
+        {
+          "id": "price_and_conditions",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/automatic/price_and_conditions"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        },
+        {
+          "id": "no_seeded_value_in_final",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/automatic/no_seeded_value_in_final"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex/automatic retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 44.15331411361694,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 203967,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 1716,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 4,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "codex-optout",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "candidate",
+      "started_at": "2026-11-26T21:54:44.796088+00:00",
+      "ended_at": "2026-11-26T21:54:48.938074+00:00",
+      "artifact": {
+        "artifact_id": "ai-friendly-runtime-cbd3800",
+        "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+        "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+        "activated_source": null,
+        "activated_sha256": null,
+        "missing_identity_reason": "No target activation observed in this case; opt-out or unrooted preflight."
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "zero_tools",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/optout/zero_tools"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        },
+        {
+          "id": "no_seeded_value_in_final",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/optout/no_seeded_value_in_final"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex/optout retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 4.141986131668091,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 31356,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 17,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 0,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "codex-control",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "no_skill",
+      "started_at": "2026-11-26T21:54:48.938420+00:00",
+      "ended_at": "2026-11-26T21:55:15.374935+00:00",
+      "artifact": {
+        "artifact_id": "target-absent-control",
+        "source_commit": null,
+        "package_sha256": null,
+        "activated_source": null,
+        "activated_sha256": null,
+        "missing_identity_reason": "Target absent; complete global host-context identity was not established."
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "inconclusive",
+      "checks": [],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex/control retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 26.43651509284973,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 134466,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 910,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 4,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "codex-reinvoke",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "candidate",
+      "started_at": "2026-11-26T21:55:15.375409+00:00",
+      "ended_at": "2026-11-26T21:56:07.196827+00:00",
+      "artifact": {
+        "artifact_id": "ai-friendly-runtime-cbd3800",
+        "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+        "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+        "activated_source": "disposable project/.agents/skills/ai-friendly-audit/SKILL.md",
+        "activated_sha256": "d2e35c0ba359c44e4fd326f46f280132c9c6e9d21fac8755c5d0b87870bae7da",
+        "missing_identity_reason": null
+      },
+      "target": {
+        "product": "Codex CLI",
+        "surface": "noninteractive CLI",
+        "distribution": "disposable project-scoped copy",
+        "version": "0.170.0",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "sandbox": "read-only",
+          "ephemeral": true,
+          "user_config_ignored": true
+        },
+        "missing_details": [
+          "Model identifier not exposed in retained JSON events."
+        ]
+      },
+      "model": {
+        "name": null,
+        "version": null,
+        "missing_reason": "Native events do not identify the default model; no model was inferred."
+      },
+      "input_hashes": {
+        "panel": "e93765667c0dd556e3b68c16d185269d4a74915aa7c1e2d98858ba82dc2d695d",
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "network": false,
+        "file_edits": false,
+        "other_agents": false
+      },
+      "outcome": "passed",
+      "checks": [
+        {
+          "id": "full_entrypoint_read",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/reinvoke/full_entrypoint_read"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        },
+        {
+          "id": "price_and_conditions",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/reinvoke/price_and_conditions"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        },
+        {
+          "id": "no_seeded_value_in_final",
+          "outcome": "passed",
+          "evidence": [
+            {
+              "kind": "artifact",
+              "ref": "docs/audit/native-cli-results.json",
+              "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+              "observed_at": "2026-11-26T22:10:52.501179+00:00",
+              "scope": "codex/reinvoke/no_seeded_value_in_final"
+            }
+          ],
+          "reason": "Observed predicate in completed native events and final output."
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "codex/reinvoke retained with exact event/output hashes."
+        }
+      ],
+      "elapsed": {
+        "value": 51.821418046951294,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": 244604,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "output_tokens": {
+          "value": 2091,
+          "unit": "tokens",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "tool_calls": {
+          "value": 5,
+          "unit": "observable completed command items",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "Codex monetary cost not exposed."
+        }
+      },
+      "reason": "Scoped pilot observation; preflight/control limitations retained in companion record."
+    },
+    {
+      "attempt_id": "claude-explicit",
+      "case_id": "AUD-007-NATIVE-PILOT",
+      "condition": "candidate",
+      "started_at": "2026-11-26T21:49:45.615744+00:00",
+      "ended_at": "2026-11-26T21:49:49.515167+00:00",
+      "artifact": {
+        "artifact_id": "ai-friendly-runtime-cbd3800",
+        "source_commit": "cbd380033bc095886b97041f604149335d699d62",
+        "package_sha256": "aea369b4b20ab03b35f59d603882295efdbac9aacec2de99f7b5d8031b6cfb94",
+        "activated_source": null,
+        "activated_sha256": null,
+        "missing_identity_reason": "Native catalog parsed the candidate, but inference/activation was blocked."
+      },
+      "target": {
+        "product": "Claude Code",
+        "surface": "print CLI",
+        "distribution": "disposable project-scoped skill",
+        "version": "2.1.98",
+        "os": "macOS-27.0-arm64-arm-64bit-Mach-O",
+        "policy": {
+          "tools": "Read,Skill",
+          "permission_mode": "dontAsk"
+        },
+        "missing_details": [
+          "Execution blocked by invalid OAuth."
+        ]
+      },
+      "model": {
+        "name": "claude-sonnet-4-6",
+        "version": null,
+        "missing_reason": "Selected model reported by host initialization; authenticated inference never occurred."
+      },
+      "input_hashes": {
+        "manifest": "5626bc153b5bd360cb748edca34a77a2b7a3ef258bebf6348177a79eb7234cde"
+      },
+      "permissions": {
+        "file_edits": false,
+        "network_tools": false
+      },
+      "outcome": "blocked",
+      "checks": [],
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-discovery.json",
+          "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Claude catalog and OAuth failure."
+        }
+      ],
+      "elapsed": {
+        "value": 3.8994228839874268,
+        "unit": "seconds",
+        "source": "measured",
+        "missing_reason": null
+      },
+      "usage": {
+        "input_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "Authentication failed before inference."
+        },
+        "output_tokens": {
+          "value": null,
+          "unit": "tokens",
+          "source": "unknown",
+          "missing_reason": "Authentication failed before inference."
+        },
+        "tool_calls": {
+          "value": 0,
+          "unit": "calls",
+          "source": "measured",
+          "missing_reason": null
+        },
+        "cost": {
+          "value": null,
+          "unit": "USD",
+          "source": "unknown",
+          "missing_reason": "No common billed-cost measurement."
+        }
+      },
+      "reason": "OAuth HTTP 401; user directed leaving further Claude cases blocked."
+    }
+  ],
+  "elapsed": {
+    "value": null,
+    "unit": "seconds",
+    "source": "unknown",
+    "missing_reason": "No single matched end-to-end timing across all host/browser surfaces."
+  },
+  "usage": {
+    "input_tokens": {
+      "value": null,
+      "unit": "tokens",
+      "source": "unknown",
+      "missing_reason": "See per-attempt provider usage; common total/cost not exposed across surfaces."
+    },
+    "output_tokens": {
+      "value": null,
+      "unit": "tokens",
+      "source": "unknown",
+      "missing_reason": "See per-attempt provider usage; common total/cost not exposed across surfaces."
+    },
+    "tool_calls": {
+      "value": null,
+      "unit": "calls",
+      "source": "unknown",
+      "missing_reason": "See per-attempt provider usage; common total/cost not exposed across surfaces."
+    },
+    "cost": {
+      "value": null,
+      "unit": "USD",
+      "source": "unknown",
+      "missing_reason": "See per-attempt provider usage; common total/cost not exposed across surfaces."
+    }
+  },
+  "outcome": "blocked",
+  "checks": [
+    {
+      "id": "native-codex-discovery",
+      "outcome": "passed",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-discovery.json",
+          "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Actual native enumeration before/after staged removal."
+        }
+      ],
+      "reason": "Candidate exposed; target-absent control and removal verified."
+    },
+    {
+      "id": "native-codex-invocation",
+      "outcome": "passed",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Exact entrypoint reads and opt-out evidence."
+        }
+      ],
+      "reason": "Three target cases read exact entrypoint; opt-out used no tools."
+    },
+    {
+      "id": "native-browser",
+      "outcome": "passed",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-browser-run/audit.json",
+          "sha256": "795aa492fc6c5ef5d8fb13ca64d05d6663d58ff7acb23d0040b75767f0f2b41f",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Actual normalized limited-browser fixture report."
+        }
+      ],
+      "reason": "Two completed review tasks and one expiration safe stop; pointer obstruction preserved."
+    },
+    {
+      "id": "native-claude-execution",
+      "outcome": "blocked",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-discovery.json",
+          "sha256": "a19dde496af6638ee378a90a3f0d8cea2cc000354fc5a5e854241bdef1230177",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Catalog discovery succeeded; OAuth 401 blocked inference."
+        }
+      ],
+      "reason": "User instructed leaving Claude tests blocked."
+    },
+    {
+      "id": "clean-comparative-benefit",
+      "outcome": "inconclusive",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/native-cli-results.json",
+          "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+          "observed_at": "2026-11-26T22:10:52.501179+00:00",
+          "scope": "Other skill activation contaminates a skill-free interpretation."
+        }
+      ],
+      "reason": "One pilot intent; no clean skill-free, held-out reliability or comparative benefit claim."
+    }
+  ],
+  "artifacts": [
+    {
+      "kind": "artifact",
+      "ref": "docs/audit/native-panel.json",
+      "sha256": "1de05c131a522530cbe1fa64a6ea75fa30e3b81fe9173edae887bb20932577fa",
+      "observed_at": "2026-11-26T22:10:52.501179+00:00",
+      "scope": "Sanitized frozen-panel provenance and amendments."
+    },
+    {
+      "kind": "artifact",
+      "ref": "docs/audit/native-cli-results.json",
+      "sha256": "8a581811af5c19ae8059301a18c92c9eaa35a6da95ddbde07f6e67a9ac8f325a",
+      "observed_at": "2026-11-26T22:10:52.501179+00:00",
+      "scope": "All eleven CLI attempts including blocked Claude."
+    },
+    {
+      "kind": "artifact",
+      "ref": "docs/audit/native-oracles.json",
+      "sha256": "778eb3dcf2ecca26bd2bd51840769ccc1a58a5a4e7a1c9411e2e935465ec2f78",
+      "observed_at": "2026-11-26T22:10:52.501179+00:00",
+      "scope": "Independent bounded synthetic effect and cleanup oracles."
+    },
+    {
+      "kind": "artifact",
+      "ref": "docs/audit/native-browser-observations.json",
+      "sha256": "35626f652e6e247011f6af8929dbcb43bb275bb4baefc752cf1b71d66415da4f",
+      "observed_at": "2026-11-26T22:10:52.501179+00:00",
+      "scope": "Minimized actual browser captures."
+    }
+  ],
+  "grader": {
+    "id": "native-pilot-independent-observations",
+    "version": "1.0",
+    "sha256": "6d52a5b88784c7f0f4d9ba306cd35e21765a7d22f025f721ae000bb8daa26afa",
+    "method": "deterministic",
+    "calibration": "Exact entrypoint substring in completed host command outputs, known fact/qualifier predicates, opt-out command count, native enumeration, cookie-free HTTP status, and server effect counters. Semantic findings remain a source-assisted pilot, not blinded precision/recall."
+  },
+  "omissions": [
+    "Claude model execution blocked by invalid OAuth, then explicitly left blocked by the user.",
+    "No same-thread second-turn/compaction test, real cloud browser, external extractor, previous-release comparison, or broad held-out reliability test.",
+    "Desktop browser workflow applied by explicit source read; CLI discovery and browser execution are separate configurations.",
+    "Raw provider transcripts remain private; public records contain hashes, minimized observations and one redacted candidate report."
+  ],
+  "redaction": "No credentials, cookie/header values, profiles or real account data in committed evidence; synthetic secret omitted from final reports."
+}

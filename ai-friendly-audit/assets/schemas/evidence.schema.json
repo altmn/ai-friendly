@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-friendly-audit.invalid/schemas/evidence.schema.json",
+  "title": "AI Friendly Audit \u2014 evidence",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+    },
+    "run_id": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+    },
+    "state_id": {
+      "anyOf": [
+        {
+          "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timestamp": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/timestamp"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "channel": {
+      "enum": [
+        "screenshot",
+        "dom",
+        "browser_ax",
+        "aria_snapshot",
+        "network_metadata",
+        "storage_metadata",
+        "source",
+        "task_event",
+        "http_response",
+        "extractor",
+        "representation",
+        "console",
+        "performance",
+        "tool_declaration",
+        "owner_supplied",
+        "observation"
+      ]
+    },
+    "representation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_scope": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/scope"
+    },
+    "test_context": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/context"
+    },
+    "sanitized_url": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sanitized": {
+      "const": true
+    },
+    "sanitization": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed": {
+          "type": "boolean"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "method",
+        "reviewed",
+        "limitations"
+      ],
+      "additionalProperties": false
+    },
+    "collector": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/collector"
+    },
+    "artifact_path": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?![/\\\\])(?![A-Za-z]:)(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "observed_data": {
+      "type": "object"
+    },
+    "frame_context": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/frame_context"
+    },
+    "environment": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/environment"
+    },
+    "guide_sections": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "profile": {
+      "$ref": "https://ai-friendly-audit.invalid/schemas/common.schema.json#/$defs/profile"
+    },
+    "baseline_variation": {
+      "enum": [
+        "baseline",
+        "controlled_variation",
+        "supplied"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "run_id",
+    "state_id",
+    "timestamp",
+    "sequence",
+    "channel",
+    "representation",
+    "evidence_scope",
+    "test_context",
+    "sanitized_url",
+    "sanitized",
+    "sanitization",
+    "collector",
+    "artifact_path",
+    "sha256",
+    "summary",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": "2.0",
+  "record_type": "host-capabilities",
+  "format": "project-specific capability record; not native host config",
+  "target": {
+    "product": "Codex CLI",
+    "surface": "owned ephemeral app-server stdio threads",
+    "distribution": "private disposable project-scoped skill",
+    "version": "0.170.0",
+    "os": "macOS arm64",
+    "policy": {
+      "sandbox": "read-only",
+      "network": false,
+      "approval": "never",
+      "reasoning_effort": "max",
+      "security_hooks_retained": true
+    },
+    "missing_details": [
+      "Provider model build, monetary cost and separately tokenized activated context not exposed."
+    ]
+  },
+  "artifact": {
+    "artifact_id": "source-max-repair-candidate",
+    "source_commit": null,
+    "package_sha256": "b83be1bcc800bbb4f690b5be933eb7f8b3e6b1e0d8f15f19fa7879d7999b0781",
+    "activated_source": "private disposable stage/skills/ai-friendly-audit/SKILL.md",
+    "activated_sha256": "bdf2f928eaa2f1f70d6c5a15de4b436da26f08652611c850f5626981f470ba9f",
+    "missing_identity_reason": "Uncommitted candidate pinned by 45-file manifest"
+  },
+  "documented_at": "2026-11-26T23:36:27.512993+00:00",
+  "tested_at": "2026-11-26T23:36:27.512993+00:00",
+  "capabilities": {
+    "focused_source_review": {
+      "availability": "supported",
+      "implementation": "Conditional supplied-source workflow, paired-name evidence and bounded helpers.",
+      "documented_version_range": null,
+      "tested_versions": [
+        "0.170.0"
+      ],
+      "test_case_ids": [
+        "AUD-007-SOURCE-MAX-REPAIR"
+      ],
+      "exercise": {
+        "outcome": "passed",
+        "reason": "Narrow explicit read-only source regression panel at max; no general host support claim.",
+        "evidence": [
+          {
+            "kind": "artifact",
+            "ref": "docs/audit/source-max-repair-results.json",
+            "sha256": "157586cbaba5cea802cd24a01618891ddb8c82ca059baad0224eae5c390989b6",
+            "observed_at": "2026-11-26T23:36:27.512993+00:00",
+            "scope": "Frozen native source cases and all attempts."
+          }
+        ]
+      },
+      "failure_behavior": "Preserve timeout/partial evidence; never raise budget or weaken policy to obtain a pass.",
+      "documentation_sources": [
+        "docs/audit/source-max-repair.md"
+      ]
+    }
+  },
+  "claims": {
+    "format": {
+      "outcome": "passed",
+      "reason": "Exact staged SKILL.md parsed; complete native entrypoint reads verified.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/source-max-repair-results.json",
+          "sha256": "157586cbaba5cea802cd24a01618891ddb8c82ca059baad0224eae5c390989b6",
+          "observed_at": "2026-11-26T23:36:27.512993+00:00",
+          "scope": "Frozen native source cases and all attempts."
+        }
+      ]
+    },
+    "discovery": {
+      "outcome": "passed",
+      "reason": "Exactly one selected staged skill or zero in clean control; no global activation claim.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/source-max-repair-results.json",
+          "sha256": "157586cbaba5cea802cd24a01618891ddb8c82ca059baad0224eae5c390989b6",
+          "observed_at": "2026-11-26T23:36:27.512993+00:00",
+          "scope": "Frozen native source cases and all attempts."
+        }
+      ]
+    },
+    "functional": {
+      "outcome": "passed",
+      "reason": "Narrow explicit read-only source regression panel at max; no general host support claim.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/source-max-repair-results.json",
+          "sha256": "157586cbaba5cea802cd24a01618891ddb8c82ca059baad0224eae5c390989b6",
+          "observed_at": "2026-11-26T23:36:27.512993+00:00",
+          "scope": "Frozen native source cases and all attempts."
+        }
+      ]
+    },
+    "safety": {
+      "outcome": "passed",
+      "reason": "Narrow source cases retain false/null/null and private-marker omission; no universal enforcement claim.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/source-max-repair-results.json",
+          "sha256": "157586cbaba5cea802cd24a01618891ddb8c82ca059baad0224eae5c390989b6",
+          "observed_at": "2026-11-26T23:36:27.512993+00:00",
+          "scope": "Frozen native source cases and all attempts."
+        }
+      ]
+    },
+    "support": {
+      "outcome": "blocked",
+      "reason": "Claude, cloud browser and broader/current-candidate acceptance remain unproved.",
+      "evidence": [
+        {
+          "kind": "artifact",
+          "ref": "docs/audit/source-max-repair-results.json",
+          "sha256": "157586cbaba5cea802cd24a01618891ddb8c82ca059baad0224eae5c390989b6",
+          "observed_at": "2026-11-26T23:36:27.512993+00:00",
+          "scope": "Bounded evidence scope, not full release qualification."
+        }
+      ]
+    }
+  },
+  "maintenance": {
+    "commitment": "none",
+    "version_range": null,
+    "owner": null,
+    "repair_guide": null
+  },
+  "documentation_sources": [
+    "docs/audit/source-max-repair.md"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "ai-friendly-audit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portable evidence-driven frontend audit skill and optional CLI.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.15.0 <25"
+  },
+  "bin": {
+    "ai-friendly-audit": "scripts/audit.mjs"
+  },
+  "scripts": {
+    "audit": "node scripts/audit.mjs",
+    "rules": "node scripts/audit.mjs rules",
+    "render:rules": "node scripts/lib/render-rules.mjs",
+    "check:syntax": "node --check scripts/audit.mjs"
+  },
+  "optionalDependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "parse5": "7.3.0"
+  },
+  "license": "MIT"
+}

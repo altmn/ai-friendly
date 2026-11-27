@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-26T22:41:14.719Z",
+  "url": "http://127.0.0.1:64506/extractor-medium.html",
+  "observed": {
+    "footer": "Minimum six editors; New Zealand organizations only.",
+    "price": "43 CAD per editor per month.",
+    "terms": "https://example.test/terms",
+    "title": "extractor fixture"
+  },
+  "cleanup": "owned tab closed"
+}

@@ -1,0 +1,10 @@
+{
+  "artifact": "supplied-page.html",
+  "capture_kind": "supplied_initial_html",
+  "captured_at": "2026-11-22T23:15:00Z",
+  "source_url": "https://example.com/research-plan",
+  "source_context": "Anonymous synthetic example, supplied as an HTML snapshot. No live browser or extractor result is available.",
+  "owner_discovery_intent": "unknown",
+  "expected_user_region": "US",
+  "credentials": "All apparent credentials in this fixture are synthetic test markers."
+}

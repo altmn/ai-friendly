@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Friendly Audit"
+  short_description: "Audit websites for AI-agent usability and retrieval"
+  default_prompt: "Use $ai-friendly-audit to audit this website and report evidence, coverage, and prioritized fixes."
