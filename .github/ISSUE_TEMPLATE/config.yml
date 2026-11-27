@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Setup and usage help
+    url: https://github.com/altmn/ai-friendly/blob/master/SUPPORT.md
+    about: Find help and the information useful for a report.
+  - name: Report a security vulnerability
+    url: https://github.com/altmn/ai-friendly/blob/master/SECURITY.md
+    about: Use the private security reporting route for sensitive findings.

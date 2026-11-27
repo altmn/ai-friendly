@@ -1,0 +1,18 @@
+name: Suggest an improvement
+description: Suggest a useful audit, setup, or documentation improvement
+labels: [enhancement]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What are you trying to do?
+      description: Describe the user task and the difficulty, using a synthetic example.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What would help?
+      description: Explain the useful outcome or documentation change. A proposed implementation is optional.
+    validations:
+      required: true
