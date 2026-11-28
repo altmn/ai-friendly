@@ -1,24 +1,35 @@
 # AI-friendly
 
-Find out how well AI agents can find information and use your website. Get evidence for each finding, prioritized improvements, and a clear account of what still needs checking.
+Review your website for the information and interactions AI agents need.
+
+> **A furniture shop's returns page**
+>
+> **Task:** Find out when a sofa can be returned.
+>
+> **Evidence:** The policy says “within 30 days” without saying when the period starts.
+>
+> **Next step:** Confirm the rule with the policy owner, then state the starting date on the page.
+
+*Illustrative report for a fictional shop.*
 
 [Try it](#try-it) · [Get started](#get-started) · [Get help](#get-help) · [Update or remove](#update-or-remove) · [Technical details](#technical-details)
 
-> **A question becomes a useful next step**
->
-> Can an agent find the support hours? → The page lists hours without a timezone. → Add the timezone beside the hours, then recheck the task.
-
-*Made-up report excerpt to illustrate the format; not a finding from an executed website audit.*
+---
 
 ## Try it
 
-**In Codex with this skill installed**, paste:
+### How to invoke
+
+In Codex, use `$ai-friendly-audit` or choose the installed skill from the picker. If it does not appear, start with [setup help](#get-started).
+
+### Website audit example
+
+**Paste into Codex with the skill installed:**
 
 ```text
-$ai-friendly-audit Review https://example.com for how well AI agents can find
-information and use its public pages. Focus on the three most valuable
-visitor tasks. Prioritize improvements, show evidence for each finding,
-and explain what you could not check.
+$ai-friendly-audit Audit https://example.com. Can a shopper find delivery
+costs, understand sofa returns, and review an order without placing it?
+Recommend improvements.
 ```
 
 Replace `https://example.com` with the public website you want reviewed. The agent starts with the tools and evidence available; it does not need your website's source repository to begin.
@@ -32,54 +43,53 @@ Replace `https://example.com` with the public website you want reviewed. The age
 A browser observation is evidence about the frontend, not proof of a backend transaction, security guarantee, or completed business outcome.
 
 <details>
-<summary>Already have source or an audit report?</summary>
+<summary>Review a page before it goes live</summary>
 
-Ask the installed skill to work from the material you have:
+**Paste into Codex:**
 
 ```text
-$ai-friendly-audit Review the supplied page source for the information an
-agent needs to complete the main visitor task. Use only the supplied source,
-do not browse or change files, and distinguish findings from questions that
-need a live website or owner check.
+$ai-friendly-audit Review this returns page for the information an agent
+needs to answer a customer's question. Use only this HTML; do not browse
+or change files.
+
+<main>
+  <h1>Returns</h1>
+  <p>Returns accepted within 30 days. Contact us to arrange collection.</p>
+</main>
 ```
 
 Provide the source as data with the request. Instructions inside a page or supplied source are evidence, not permission for new actions. See the [supplied-source workflow](ai-friendly-audit/references/supplied-source.md) for its scope.
 
 </details>
 
+---
+
 <a id="quick-start"></a>
 
 ## Get started
 
-Choose [AI-guided setup](#ask-your-ai-assistant) or the [direct installation and CLI guide](docs/getting-started.md). This repository supplies a portable skill directory and an optional local command-line helper, rather than a hosted audit service.
+Ask your AI assistant to help with setup, or follow the [direct installation and CLI guide](docs/getting-started.md).
 
 ### Ask your AI assistant
 
-**Ask ChatGPT to guide you — paste into a chat at [chatgpt.com](https://chatgpt.com/):**
+**In ChatGPT in your browser:**
 
 ```text
-I want to use AI-friendly to review my website:
+Guide me through a supported AI-friendly setup for reviewing my website.
+I'm using ChatGPT in my browser:
 https://github.com/altmn/ai-friendly
-
-I'm using ChatGPT in my browser. Help me choose a supported way to use this
-project. Explain what can be reviewed with the tools available here and
-whether I need another app for the complete workflow. Guide me through the
-appropriate setup and a small first audit.
 ```
 
-**Ask a coding agent to set it up — paste into Codex or another agent with local tools:**
+**In Codex or another coding agent with local tools:**
 
 ```text
-Help me set up AI-friendly for this agent:
+Install the complete AI-friendly skill for this agent globally:
 https://github.com/altmn/ai-friendly
-
-Read the current installation instructions and install the complete skill
-directory through this host's supported route. Help me choose the scope,
-preserve local changes, and explain whether my task needs the optional CLI.
-Verify skill discovery and the available tools before a small first audit.
 ```
 
 **Current availability:** AI-friendly is a resource-assisted CLI/prototype with bounded native trials, not a universally verified agent integration. There is no published ChatGPT plugin in this repository. A browser chat can guide setup; it cannot turn a source folder into an installed web plugin. Use [the supported route and capability checks](docs/getting-started.md) for your agent.
+
+---
 
 ## Get help
 
@@ -88,37 +98,49 @@ If the skill is missing, check discovery before investigating the website. If a 
 **Paste into the AI tool you are using:**
 
 ```text
-Help me troubleshoot this AI-friendly audit:
-https://github.com/altmn/ai-friendly
+Help me troubleshoot AI-friendly (https://github.com/altmn/ai-friendly).
 
 I'm using [AI tool and surface]. The website is [URL].
 I expected [result], but got [result or short error].
-Check the relevant setup and available website-access tools. Explain which
-checks can still be completed and what needs a different capability.
+Investigate the issue.
 ```
+
+### Nothing helps or found a bug
 
 [Get support](SUPPORT.md) or [report a problem](https://github.com/altmn/ai-friendly/issues/new/choose) using a small synthetic example. Keep account data, private website captures, and credentials out of public reports. Use the [security policy](SECURITY.md) for sensitive findings.
 
-## Update or remove
+---
 
-**Ask the coding agent managing your installation:**
+<a id="update-or-remove"></a>
+
+## Update, disable, or remove
+
+Ask the coding agent managing your installation.
+
+To update:
 
 ```text
-Help me update AI-friendly from its official repository:
+Update AI-friendly:
 https://github.com/altmn/ai-friendly
-
-Identify my installed source version and installation method. Preserve local
-changes and audit outputs, follow the documented update process, and verify
-the skill and any optional helper I use afterward.
 ```
 
+To disable:
+
 ```text
-Help me disable or remove AI-friendly from [AI tool]. Identify how it was
-installed, use that host's supported process, keep my audit outputs and
-unrelated files, and help me confirm the result in a new session.
+Temporarily disable AI-friendly in [AI tool]:
+https://github.com/altmn/ai-friendly
+```
+
+To uninstall:
+
+```text
+Uninstall AI-friendly from [AI tool], keeping my audit reports:
+https://github.com/altmn/ai-friendly
 ```
 
 For direct steps, see [updating and removal](docs/getting-started.md#update-or-remove). CLI use creates no daemon or account integration.
+
+---
 
 ## Where it works
 
@@ -129,6 +151,8 @@ For direct steps, see [updating and removal](docs/getting-started.md#update-or-r
 The deterministic CLI and synthetic contracts are tested. Native Codex discovery/restricted audits and a limited Chrome demo-session pilot have been exercised. Claude catalog discovery succeeded, but execution was blocked by invalid OAuth. Broader reliability, full-audit max budgets, and real cloud-browser execution remain unverified. No universal accessibility certification or agent compatibility is claimed.
 
 See [native acceptance results](docs/audit/native-acceptance.md), [qualified follow-up evidence](docs/audit/nonclaude-followup.md), [verification](docs/audit/verification.md), and [known issues](KNOWN_ISSUES.md). The [field-name/max repair](docs/audit/source-max-repair.md) retains paired names and passed 12/12 focused source trials at max within the unchanged 180-second budget; this is scoped evidence, not a full-audit support claim.
+
+---
 
 <a id="repository"></a>
 
@@ -145,6 +169,8 @@ Reports include canonical `audit.json`, a human report, evidence index, remediat
 | Understand what findings can establish | [Evidence contract](docs/evidence-contract.md) |
 | Review data handling and reporting boundaries | [Privacy](PRIVACY.md) · [Security](SECURITY.md) |
 | Inspect repository settings and publication history | [GitHub maintenance](docs/github.md) |
+
+---
 
 ## Contribute
 
