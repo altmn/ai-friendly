@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "root_directory": "ai-friendly-audit",
   "files": [
     {
@@ -110,12 +110,12 @@
     {
       "path": "ai-friendly-audit/package-lock.json",
       "bytes": 4187,
-      "sha256": "bd51972a9862a3b842f76dedc89b0ac98a2a37f9cdc830fcbb98b635bf67f0c7"
+      "sha256": "599cb643d6359604b466d1efde1fd5efa7695b798e1ee0d73a23045e0332012f"
     },
     {
       "path": "ai-friendly-audit/package.json",
       "bytes": 626,
-      "sha256": "2e29cc126232430a23467cec73bcac7111d7c428bd6ef3aecd3d484aa7203833"
+      "sha256": "45aa9eed5bf117b1459452242b9779973815413dc0c3cc9b073ef24787cb4afe"
     },
     {
       "path": "ai-friendly-audit/references/ai-friendly-audit-frontend.md",

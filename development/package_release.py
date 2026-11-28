@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse
 import hashlib
 import json
+import re
 import zipfile
 
 parser=argparse.ArgumentParser()
@@ -11,6 +12,9 @@ parser.add_argument('--out',type=Path,required=True)
 args=parser.parse_args()
 root=args.package_root.resolve()
 dev=Path(__file__).resolve().parent
+version=json.loads((root/'package.json').read_text())['version']
+if not isinstance(version,str) or not re.fullmatch(r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)',version):
+    raise ValueError('Release package version must be a stable semantic version')
 args.out.mkdir(parents=True,exist_ok=True)
 stamp=(2026,11,22,0,0,0)
 
@@ -37,9 +41,9 @@ for file in root.rglob('*'):
     runtime.append(('ai-friendly-audit/'+relative.as_posix(),file))
 required=['LICENSE','NOTICE.md','SKILL.md','agents/openai.yaml','assets/module.json','assets/rules/frontend-v1.json','assets/report-template.md','package.json','package-lock.json','scripts/audit.mjs']
 assert all((root/x).is_file() for x in required)
-manifest={'version':'1.0.0','root_directory':'ai-friendly-audit','files':[{'path':name,'bytes':file.stat().st_size,'sha256':checksum(file.read_bytes())} for name,file in sorted(runtime)]}
+manifest={'version':version,'root_directory':'ai-friendly-audit','files':[{'path':name,'bytes':file.stat().st_size,'sha256':checksum(file.read_bytes())} for name,file in sorted(runtime)]}
 (dev/'runtime-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
-runtime_result=archive(args.out/'ai-friendly-audit-canonical-package-1.0.0.zip',runtime)
+runtime_result=archive(args.out/f'ai-friendly-audit-canonical-package-{version}.zip',runtime)
 
 development=[]
 for pattern in ['*.md','*.py','runtime-manifest.json','final-test-run.txt','tests/*.mjs','native_acceptance/*.py','native_acceptance/*.mjs','native_acceptance/README.md','fixtures/*.json','fixtures/*.html','examples/supplied-review/*.md','examples/supplied-review/*.json','examples/supplied-review/evidence/*']:
@@ -47,5 +51,5 @@ for pattern in ['*.md','*.py','runtime-manifest.json','final-test-run.txt','test
         if file.is_file():development.append(('development/'+file.relative_to(dev).as_posix(),file))
 development.extend((name, dev.parent/name) for name in ['LICENSE','NOTICE.md'])
 development=list({name:file for name,file in development}.items())
-dev_result=archive(args.out/'ai-friendly-audit-development-and-verification-1.0.0.zip',development)
+dev_result=archive(args.out/f'ai-friendly-audit-development-and-verification-{version}.zip',development)
 print(json.dumps({'archives':[runtime_result,dev_result]},indent=2))

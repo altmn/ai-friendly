@@ -15,3 +15,14 @@ A request to "get to production" includes a new versioned release, even for docu
    A production request authorizes publication, updates to existing live
    installations, pushing, and merging under the project instructions; a local
    build or source-only request alone does not.
+
+The root and portable package versions identify the distribution. Schema,
+catalog, module, adapter, and collector versions identify their contracts; change
+those only when the corresponding contract changes. The packager reads the
+portable package version and regenerates `development/runtime-manifest.json`.
+
+For a production release, commit that manifest with the reviewed source, then
+build again from the clean merged revision. Publish both ZIP files with a
+`SHA256SUMS` file and release notes, tag the merged revision, and download the
+published assets to verify their hashes and archive contents before updating
+existing installations.
